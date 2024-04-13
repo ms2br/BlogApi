@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "Hash": "GiI35h73Mco5CaHOHa4FVWEMdWbI8KuNQ4VxNp28aP8=",
+  "Source": "TwitterApi.Api",
+  "BasePath": "_content/TwitterApi.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "TwitterApi.Api\\wwwroot",
+      "Source": "TwitterApi.Api",
+      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "BasePath": "_content/TwitterApi.Api",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png",
+      "SourceId": "TwitterApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "BasePath": "_content/TwitterApi.Api",
+      "RelativePath": "assets/img/user/73793429-fb50-4d7c-9cb7-3a556c8a697b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png"
+    },
+    {
+      "Identity": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
+      "SourceId": "TwitterApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "BasePath": "_content/TwitterApi.Api",
+      "RelativePath": "schema/confirmEmail.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\schema\\confirmEmail.html"
+    }
+  ]
+}

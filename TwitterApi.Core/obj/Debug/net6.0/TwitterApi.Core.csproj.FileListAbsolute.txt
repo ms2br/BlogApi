@@ -1,0 +1,13 @@
+C:\CodeTasks\Api\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.deps.json
+C:\CodeTasks\Api\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.dll
+C:\CodeTasks\Api\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.pdb
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.csproj.AssemblyReference.cache
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.AssemblyInfoInputs.cache
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.AssemblyInfo.cs
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.csproj.CoreCompileInputs.cache
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.sourcelink.json
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.dll
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\refint\TwitterApi.Core.dll
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.pdb
+C:\CodeTasks\Api\TwitterApi.Core\obj\Debug\net6.0\ref\TwitterApi.Core.dll
