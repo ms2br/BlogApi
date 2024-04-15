@@ -9,15 +9,28 @@ namespace TwitterApi.Bussines.Helpers
 
         public static bool IsCorrectType(this IFormFile file, string type = "image") => file.ContentType.Contains(type);
 
-
-        public async static Task<string> SaveAsync(this IFormFile file, string path)
+        public async static Task<(string, string)> SaveAsync(this IFormFile file, string path)
         {
-            string fileName = Path.Combine(path, Guid.NewGuid().ToString() + Path.GetExtension(file.FileName));
-            using (FileStream fs = File.Create(Path.Combine(PathConstants.RootPath, fileName)))
+            string fileName = Guid.NewGuid().ToString();
+            string filePath = Path.Combine(PathConstants.RootPath, path, fileName + Path.GetExtension(file.FileName));
+            using (FileStream fs = File.Create(filePath))
             {
                 await file.CopyToAsync(fs);
             }
-            return fileName;
+            return (filePath, fileName);
+        }
+
+        public async static Task UpdateAsync(this IFormFile file, string filePath)
+        {
+            if (!File.Exists(filePath))
+                throw new Exception();
+            using (FileStream fs = File.Create(filePath))
+                await file.CopyToAsync(fs);
+        }
+
+        public static void FileRemove(this string filePath)
+        {
+            File.Delete(filePath);
         }
     }
 }

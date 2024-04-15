@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "DoiymSXs9K+DimRIycppm3SrNvG+7fdzdpNggHRKTGjbzcaluCTbntAt3aX5PX2w2Z8hpUb/+qJ1QXtjvIa0zg==",
+  "dgSpecHash": "aNVRlHx/cFLBcMqCIVbUOCxcwvgk/PjbWfR8+A9c0D30GaiBJFmztb3K2+k85HRFyafUlwctUCmPCn4ZfksX5A==",
   "success": true,
-  "projectFilePath": "C:\\CodeTasks\\Api\\TwitterApi.DAL\\TwitterApi.DAL.csproj",
+  "projectFilePath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\TwitterApi.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msbr\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.28\\microsoft.aspnetcore.cryptography.internal.6.0.28.nupkg.sha512",

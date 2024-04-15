@@ -45,7 +45,10 @@ namespace TwitterApi.Bussines.Services.Implements
         }
 
         public async Task RemoveAsync(int? id)
-        => _repo.Remove(await CheckIdAsync(id));
+        {
+            _repo.Remove(await CheckIdAsync(id));
+            await _repo.SaveAsync();
+        }
 
         public async Task SoftRemoveAsync(int? id)
         {

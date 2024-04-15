@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pNfCsBO1Eg+F1bQkHF5cvF+Z4BPCWMKpDCh7K9qkX7PuXUV9PVtE9JO4SAOPUT6cVXCUuJN7wNGoBCmIEAovbQ==",
+  "dgSpecHash": "anqKCg3Ldy1EPFDvieFNRtOd0QENRqpyjZoRnwYqxqmWMptpJ8Io7+dde4JDUJAlH6EzU8HkT3tM7nWr9lizZA==",
   "success": true,
-  "projectFilePath": "C:\\CodeTasks\\Api\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
+  "projectFilePath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\msbr\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

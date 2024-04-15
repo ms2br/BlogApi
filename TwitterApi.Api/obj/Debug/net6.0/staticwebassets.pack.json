@@ -1,11 +1,15 @@
 {
   "Files": [
     {
-      "Id": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png",
-      "PackagePath": "staticwebassets\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png"
+      "Id": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\27909d07-8225-4ded-9763-42ade0ccf19e.png",
+      "PackagePath": "staticwebassets\\assets\\img\\post\\27909d07-8225-4ded-9763-42ade0ccf19e.png"
     },
     {
-      "Id": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
+      "Id": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\5c77ffed-83fd-4329-8902-288c1c80a22b.png",
+      "PackagePath": "staticwebassets\\assets\\img\\post\\5c77ffed-83fd-4329-8902-288c1c80a22b.png"
+    },
+    {
+      "Id": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
       "PackagePath": "staticwebassets\\schema\\confirmEmail.html"
     },
     {

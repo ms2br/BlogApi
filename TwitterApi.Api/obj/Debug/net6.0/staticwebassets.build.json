@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GiI35h73Mco5CaHOHa4FVWEMdWbI8KuNQ4VxNp28aP8=",
+  "Hash": "wdSGIOPq9DrFkgJsg6ZtsSUJ1dBWf8zRpsV9OsofwMs=",
   "Source": "TwitterApi.Api",
   "BasePath": "_content/TwitterApi.Api",
   "Mode": "Default",
@@ -10,19 +10,19 @@
     {
       "Name": "TwitterApi.Api\\wwwroot",
       "Source": "TwitterApi.Api",
-      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "ContentRoot": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
       "BasePath": "_content/TwitterApi.Api",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png",
+      "Identity": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\27909d07-8225-4ded-9763-42ade0ccf19e.png",
       "SourceId": "TwitterApi.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "ContentRoot": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
       "BasePath": "_content/TwitterApi.Api",
-      "RelativePath": "assets/img/user/73793429-fb50-4d7c-9cb7-3a556c8a697b.png",
+      "RelativePath": "assets/img/post/27909d07-8225-4ded-9763-42ade0ccf19e.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -33,13 +33,32 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\user\\73793429-fb50-4d7c-9cb7-3a556c8a697b.png"
+      "OriginalItemSpec": "wwwroot\\assets\\img\\post\\27909d07-8225-4ded-9763-42ade0ccf19e.png"
     },
     {
-      "Identity": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
+      "Identity": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\5c77ffed-83fd-4329-8902-288c1c80a22b.png",
       "SourceId": "TwitterApi.Api",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\CodeTasks\\Api\\TwitterApi.Api\\wwwroot\\",
+      "ContentRoot": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
+      "BasePath": "_content/TwitterApi.Api",
+      "RelativePath": "assets/img/post/5c77ffed-83fd-4329-8902-288c1c80a22b.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\img\\post\\5c77ffed-83fd-4329-8902-288c1c80a22b.png"
+    },
+    {
+      "Identity": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
+      "SourceId": "TwitterApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
       "BasePath": "_content/TwitterApi.Api",
       "RelativePath": "schema/confirmEmail.html",
       "AssetKind": "All",

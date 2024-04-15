@@ -32,7 +32,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
                 if (!dto.ImgUrl.IsCorrectType())
                     throw new InCorrectTypeException(ExceptionMessages.InCorrectTypeMessage);
-                appUser.ImgUrl = await dto.ImgUrl.SaveAsync(PathConstants.UserImg);
+                appUser.ImgUrl = (await dto.ImgUrl.SaveAsync(PathConstants.UserImg)).Item1;
             }
             IdentityResult result = await _um.CreateAsync(appUser, dto.Password);
             if (!result.Succeeded)

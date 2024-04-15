@@ -9,7 +9,7 @@ namespace TwitterApi.DAL.Configurations
         public void Configure(EntityTypeBuilder<FileEntity> builder)
         {
             builder.Property(x => x.Name)
-                .HasMaxLength(32)
+                .HasMaxLength(36)
                 .IsRequired();
 
             builder.Property(x => x.ContentType)

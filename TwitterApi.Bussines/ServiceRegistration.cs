@@ -13,6 +13,7 @@ namespace TwitterApi.Bussines
         public static IServiceCollection AddRepositories(this IServiceCollection repo)
         {
             repo.AddScoped<ITopicRepository, TopicRepository>();
+            repo.AddScoped<IFileRepository, FileRepository>();
             return repo;
         }
         public static IServiceCollection AddServices(this IServiceCollection services)
@@ -21,8 +22,9 @@ namespace TwitterApi.Bussines
             services.AddScoped<IAuthService, AuthService>();
             services.AddScoped<IEmailService, EmailService>();
             services.AddScoped<IUserService, UserService>();
-            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddScoped<ITopicService, TopicService>();
+            services.AddScoped<IFileService, FileService>();
+            services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             return services;
         }
 
