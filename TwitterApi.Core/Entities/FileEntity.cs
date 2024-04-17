@@ -7,5 +7,7 @@ namespace TwitterApi.Core.Entities
         public string ContentType { get; set; }
         public string Path { get; set; }
         public string Name { get; set; }
+        public int BlogId { get; set; }
+        public Blog? Blog { get; set; }
     }
 }

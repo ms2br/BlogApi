@@ -6,5 +6,6 @@ namespace TwitterApi.Core.Entities.Identity
     {
         public string? ImgUrl { get; set; }
         public DateTime BirthDate { get; set; }
+        public ICollection<Blog>? Blogs { get; set; }
     }
 }

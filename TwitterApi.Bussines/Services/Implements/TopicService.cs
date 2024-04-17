@@ -1,6 +1,5 @@
 ﻿using AutoMapper;
 using TwitterApi.Bussines.Dtos.TopicDtos;
-using TwitterApi.Bussines.Dtos.TopicDtos.Common;
 using TwitterApi.Bussines.Exceptions.TopicException;
 using TwitterApi.Core.Entities;
 using TwitterApi.DAL.Repositories.Interfaces;
@@ -27,7 +26,7 @@ namespace TwitterApi.Bussines.Services.Implements
             where T : class
         => _mapper.Map<T>(await CheckIdAsync(id, true));
 
-        public async Task CreateAsync(TopicBaseDto dto)
+        public async Task CreateAsync(TopicCreateDto dto)
         {
             await IsNameExistAsync(dto.Name);
             await _repo.CreateAsync(_mapper.Map<Topic>(dto));

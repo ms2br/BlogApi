@@ -1,8 +1,6 @@
-﻿using TwitterApi.Bussines.Dtos.TopicDtos.Common;
-
-namespace TwitterApi.Bussines.Dtos.TopicDtos
+﻿namespace TwitterApi.Bussines.Dtos.TopicDtos
 {
-    public class TopicDetailDto : TopicBaseDto
+    public class TopicDetailDto
     {
         public int Id { get; set; }
         public DateTime? CreateTime { get; set; }

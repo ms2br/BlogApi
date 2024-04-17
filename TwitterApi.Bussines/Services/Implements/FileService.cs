@@ -17,9 +17,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task<IEnumerable<T>> GetAllAsync<T>()
             where T : class
-        {
-            return _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync());
-        }
+        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync());
 
         public async Task<T> GetByIdAsync<T>(int? id) where T : class
         => _mapper.Map<T>(await CheckIdAsync(id, false));

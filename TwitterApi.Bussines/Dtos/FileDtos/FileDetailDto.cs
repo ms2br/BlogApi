@@ -1,8 +1,8 @@
-﻿using TwitterApi.Bussines.Dtos.FileDtos.Common;
+﻿using FluentValidation;
 
 namespace TwitterApi.Bussines.Dtos.FileDtos
 {
-    public class FileDetailDto : FileBaseDto
+    public class FileDetailDto
     {
         public int Id { get; set; }
         public string Name { get; set; }
@@ -11,5 +11,16 @@ namespace TwitterApi.Bussines.Dtos.FileDtos
         public DateTime CreateTime { get; set; }
         public DateTime? UpdateTime { get; set; }
         public bool IsDeleted { get; set; }
+    }
+
+    public class FileDetailDtoValidator : AbstractValidator<FileDetailDto>
+    {
+        public FileDetailDtoValidator()
+        {
+            RuleFor(x => x.Name)
+                .MaximumLength(32)
+                .MinimumLength(3)
+                .NotEmpty();
+        }
     }
 }

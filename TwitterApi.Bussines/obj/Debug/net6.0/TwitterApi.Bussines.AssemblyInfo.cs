@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TwitterApi.Bussines")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4eaa77698782a7b6f2f4d743c9ef5d5a1591c0ff")]
 [assembly: System.Reflection.AssemblyProductAttribute("TwitterApi.Bussines")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TwitterApi.Bussines")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

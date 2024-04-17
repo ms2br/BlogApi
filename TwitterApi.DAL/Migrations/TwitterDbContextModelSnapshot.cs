@@ -222,6 +222,60 @@ namespace TwitterApi.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasMaxLength(1024)
+                        .HasColumnType("nvarchar(1024)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("Blogs");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
+                {
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TopicId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("BlogId", "TopicId");
+
+                    b.HasIndex("TopicId");
+
+                    b.ToTable("BlogTopic");
+                });
+
             modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
                 {
                     b.Property<int>("Id")
@@ -229,6 +283,9 @@ namespace TwitterApi.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BlogId")
+                        .HasColumnType("int");
 
                     b.Property<string>("ContentType")
                         .IsRequired()
@@ -253,6 +310,8 @@ namespace TwitterApi.DAL.Migrations
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BlogId");
 
                     b.ToTable("Files");
                 });
@@ -346,6 +405,63 @@ namespace TwitterApi.DAL.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+                {
+                    b.HasOne("TwitterApi.Core.Entities.Identity.AppUser", "AppUser")
+                        .WithMany("Blogs")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
+                {
+                    b.HasOne("TwitterApi.Core.Entities.Blog", "Blog")
+                        .WithMany("BlogTopics")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("TwitterApi.Core.Entities.Topic", "Topic")
+                        .WithMany("BlogTopics")
+                        .HasForeignKey("TopicId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("Blog");
+
+                    b.Navigation("Topic");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
+                {
+                    b.HasOne("TwitterApi.Core.Entities.Blog", "Blog")
+                        .WithMany("Files")
+                        .HasForeignKey("BlogId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("Blog");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+                {
+                    b.Navigation("BlogTopics");
+
+                    b.Navigation("Files");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
+                {
+                    b.Navigation("BlogTopics");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Identity.AppUser", b =>
+                {
+                    b.Navigation("Blogs");
                 });
 #pragma warning restore 612, 618
         }

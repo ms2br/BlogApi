@@ -14,6 +14,8 @@ namespace TwitterApi.DAL.Context
         public DbSet<AppUser> AppUsers { get; set; }
         public DbSet<Topic> Topics { get; set; }
         public DbSet<FileEntity> Files { get; set; }
+        public DbSet<Blog> Blogs { get; set; }
+
         public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
         {
             var enties = ChangeTracker.Entries<BaseEntity>();
