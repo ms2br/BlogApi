@@ -252,7 +252,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Blogs", (string)null);
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
@@ -273,7 +273,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("BlogTopic");
+                    b.ToTable("BlogTopic", (string)null);
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
@@ -313,7 +313,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Files");
+                    b.ToTable("Files", (string)null);
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
@@ -340,7 +340,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Topics");
+                    b.ToTable("Topics", (string)null);
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Identity.AppUser", b =>

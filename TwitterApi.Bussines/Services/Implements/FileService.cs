@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using TwitterApi.Bussines.Dtos.FileDtos;
 using TwitterApi.Core.Entities;
 using TwitterApi.DAL.Repositories.Interfaces;
@@ -22,18 +23,14 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task<T> GetByIdAsync<T>(int? id) where T : class
         => _mapper.Map<T>(await CheckIdAsync(id, false));
 
-        public async Task CreateAsync(FileCreateDto dto)
+        public async Task<FileEntity> CreateAsync(IFormFile file)
         {
-            foreach (var item in dto.Files)
-            {
-                var file = await item.SaveAsync(PathConstants.PostFile);
-                FileEntity entity = new FileEntity();
-                entity.Path = file.Item1;
-                entity.Name = file.Item2;
-                entity.ContentType = item.ContentType;
-                await _repo.CreateAsync(entity);
-                await _repo.SaveAsync();
-            }
+            var fileInfo = await file.SaveAsync(PathConstants.PostFile);
+            FileEntity entity = new FileEntity();
+            entity.Path = fileInfo.Item1;
+            entity.Name = fileInfo.Item2;
+            entity.ContentType = file.ContentType;
+            return entity;
         }
 
         public async Task UpdateAsync(int? id, FileUpdateDto dto)

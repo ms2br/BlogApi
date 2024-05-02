@@ -24,3 +24,16 @@ C:\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.dll
 C:\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\refint\TwitterApi.Core.dll
 C:\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.pdb
 C:\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\ref\TwitterApi.Core.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\refint\TwitterApi.Core.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.pdb
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.deps.json
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\bin\Debug\net6.0\TwitterApi.Core.pdb
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.csproj.AssemblyReference.cache
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.AssemblyInfoInputs.cache
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.AssemblyInfo.cs
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.csproj.CoreCompileInputs.cache
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\TwitterApi.Core.sourcelink.json
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Core\obj\Debug\net6.0\ref\TwitterApi.Core.dll

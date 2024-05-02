@@ -2376,11 +2376,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
+      "projectUniqueName": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
       "projectName": "TwitterApi.Bussines",
-      "projectPath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
+      "projectPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
       "packagesPath": "C:\\Users\\msbr\\.nuget\\packages\\",
-      "outputPath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\obj\\",
+      "outputPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2402,8 +2402,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\TwitterApi.DAL.csproj": {
-              "projectPath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\TwitterApi.DAL.csproj"
+            "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\TwitterApi.DAL.csproj": {
+              "projectPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\TwitterApi.DAL.csproj"
             }
           }
         }
@@ -2412,6 +2412,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2451,7 +2456,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
       }
     }
   }

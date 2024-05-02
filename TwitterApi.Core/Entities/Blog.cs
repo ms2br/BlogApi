@@ -5,6 +5,11 @@ namespace TwitterApi.Core.Entities
 {
     public class Blog : BaseEntity
     {
+        public Blog()
+        {
+            Files = new HashSet<FileEntity>();
+            BlogTopics = new HashSet<BlogTopic>();
+        }
         public string Content { get; set; }
         public string UserId { get; set; }
         public AppUser? AppUser { get; set; }

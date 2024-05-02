@@ -1,13 +1,13 @@
 ﻿using FluentValidation;
+using Microsoft.AspNetCore.Http;
 
 namespace TwitterApi.Bussines.Dtos.BlogDto
 {
     public class BlogCreateDto
     {
         public string Content { get; set; }
-        public string UserId { get; set; }
-        public IEnumerable<int> FileIds { get; set; }
-        public IEnumerable<int> TopicIds { get; set; }
+        public IEnumerable<IFormFile>? FormFiles { get; set; }
+        public IEnumerable<int>? TopicIds { get; set; }
     }
 
     public class BlogCreateDtoValidator : AbstractValidator<BlogCreateDto>
@@ -18,6 +18,10 @@ namespace TwitterApi.Bussines.Dtos.BlogDto
                 .MaximumLength(1024)
                 .MinimumLength(3)
                 .NotEmpty();
+
+            RuleFor(x => x.TopicIds)
+                .NotEmpty()
+                    .WithMessage("The Topic Must Not Be Empty");
         }
     }
 }

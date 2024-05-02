@@ -35,7 +35,7 @@ namespace TwitterApi.Bussines.ExternalServices.Implements
         public async Task SendEmailConfirmedAsync(UserDto user)
         {
             string token = await _um.GenerateEmailConfirmationTokenAsync(_um.FindByIdAsync(user.UserId).Result);
-            string link = await CreateLinkAsync("EmailConfirmed", "Auths", token, user);
+            string link = await CreateLinkAsync("EmailConfirmed", "Users", token, user);
             string template = await EditingEmailConfirmedTemplateAsync(user.UserName, link);
             await SendEmailAsync(template, user.UserName, user.Email);
         }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj": {}
+    "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj": {}
   },
   "projects": {
-    "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj": {
+    "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj",
+        "projectUniqueName": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj",
         "projectName": "TwitterApi.Core",
-        "projectPath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj",
+        "projectPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\TwitterApi.Core.csproj",
         "packagesPath": "C:\\Users\\msbr\\.nuget\\packages\\",
-        "outputPath": "C:\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\obj\\",
+        "outputPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -39,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -66,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -18,13 +18,13 @@ namespace TwitterApi.Bussines.Services.Implements
             _repo = repo;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync<T>()
+        public async Task<IEnumerable<T>> GetAllAsync<T>(params string[] includes)
             where T : class
-        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync());
+        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync(false,includes));
 
-        public async Task<T> GetByIdAsync<T>(int? id)
+        public async Task<T> GetByIdAsync<T>(int? id, params string[] includes)
             where T : class
-        => _mapper.Map<T>(await CheckIdAsync(id, true));
+        => _mapper.Map<T>(await CheckIdAsync(id, true,includes));
 
         public async Task CreateAsync(TopicCreateDto dto)
         {
@@ -56,11 +56,11 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         }
 
-        public async Task<Topic> CheckIdAsync(int? id, bool isTrack = false)
+        public async Task<Topic> CheckIdAsync(int? id, bool isTrack = false,params string[] includes)
         {
             if (id <= 1 || id == null)
                 throw new ArgumentOutOfRangeException();
-            Topic? item = await _repo.GetByIdAsync(id, isTrack);
+            Topic? item = await _repo.GetByIdAsync(id, isTrack, includes);
             if (item == null)
                 throw new NotFoundException<Topic>();
             return item;
@@ -71,5 +71,8 @@ namespace TwitterApi.Bussines.Services.Implements
             if (await _repo.IsExistAsync(x => x.Name.ToLower() == name.ToLower()))
                 throw new TopicIsExistException();
         }
+
+        public async Task<bool> IsExistAsync(int? id)
+         => await _repo.IsExistAsync(x => x.Id == id);
     }
 }

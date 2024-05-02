@@ -16,8 +16,11 @@ namespace TwitterApi.DAL.Repositories.Implements
 
         DbSet<T> Table => _db.Set<T>();
 
-        public async Task<IQueryable<T>> GetAllAsync(bool noTracking = true)
-        => noTracking ? Table.AsNoTracking() : Table;
+        public async Task<IQueryable<T>> GetAllAsync(bool noTracking = true, params string[] includes)
+        {
+            var items = await includeMultiples(Table.AsQueryable(), includes);
+            return noTracking ? items.AsNoTracking() : items;
+        }
 
         public async Task CreateAsync(T data)
         => await Table.AddAsync(data);
@@ -25,7 +28,7 @@ namespace TwitterApi.DAL.Repositories.Implements
         public async Task SaveAsync()
         => await _db.SaveChangesAsync();
 
-        public async Task<T> GetByIdAsync(int? id, bool noTracking = true)
+        public async Task<T> GetByIdAsync(int? id, bool noTracking = true, params string[] includes)
         => noTracking ? await Table.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id) : await Table.FindAsync(id);
 
         public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
@@ -33,5 +36,13 @@ namespace TwitterApi.DAL.Repositories.Implements
 
         public void Remove(T data)
         => Table.Remove(data);
+
+        async Task<IQueryable<T>> includeMultiples(IQueryable<T> includeQuery, params string[] includes)
+        {
+            if(includes.Length > 0 && includes != null)
+                foreach (var include in includes)
+                    includeQuery = includeQuery.Include(include);
+            return includeQuery;
+        }
     }
 }
