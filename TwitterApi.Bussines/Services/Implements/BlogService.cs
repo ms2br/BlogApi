@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using TwitterApi.Bussines.Dtos.BlogDto;
+using TwitterApi.Bussines.Dtos.BlogDtos;
 using TwitterApi.Bussines.Dtos.TopicDtos;
 using TwitterApi.Bussines.Exceptions.TopicException;
 using TwitterApi.Core.Entities;
@@ -39,7 +39,6 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task CreateAsync(BlogCreateDto dto)
         {
-
             var item = _mapper.Map<Blog>(dto);
             item.UserId = _userId;
             if (dto.FormFiles != null)
@@ -48,7 +47,7 @@ namespace TwitterApi.Bussines.Services.Implements
             if(!Enumerable.SequenceEqual((await _topicService.GetAllAsync<TopicDetailDto>()).Select(x=> x.Id), dto.TopicIds))
                 throw new TopicIsExistException();
             foreach (int topicId in dto.TopicIds)
-                item.BlogTopics.Add(new BlogTopic { BlogId = item.Id, TopicId = topicId });
+                item.Topics.Add(new BlogTopic { TopicId = topicId});
 
             await _repo.CreateAsync(item);
             await _repo.SaveAsync();
@@ -85,19 +84,5 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task<bool> IsExistAsync(int? id)
         => await _repo.IsExistAsync(x => x.Id == id);
-
-        public async Task<TopicDetailDto> Test()
-        {
-            var blog = await _repo.GetAllAsync(false);
-            Topic o;
-            foreach (var item in blog)
-            {
-                foreach (var data in item.BlogTopics)
-                {
-                    o = data.Topic;
-                }
-            }
-            return null;
-        }
     }
 }

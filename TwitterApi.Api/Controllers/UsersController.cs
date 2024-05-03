@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TwitterApi.Bussines.Dtos.AppUserDtos;
+using TwitterApi.Bussines.Dtos.UserDtos;
 using TwitterApi.Bussines.Services.Interfaces;
 
 namespace TwitterApi.Api.Controllers

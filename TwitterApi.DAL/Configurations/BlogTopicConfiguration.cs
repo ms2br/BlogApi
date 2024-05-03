@@ -12,12 +12,12 @@ namespace TwitterApi.DAL.Configurations
             builder.HasKey(x => new { x.BlogId, x.TopicId });
 
             builder.HasOne(x => x.Topic)
-                .WithMany(x => x.BlogTopics)
+                .WithMany(x => x.Blogs)
                 .HasForeignKey(x => x.TopicId)
                 .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasOne(x => x.Blog)
-                .WithMany(x => x.BlogTopics)
+                .WithMany(x => x.Topics)
                 .HasForeignKey(x => x.BlogId)
                 .OnDelete(DeleteBehavior.NoAction);
         }

@@ -1,4 +1,6 @@
-﻿using TwitterApi.Core.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using TwitterApi.Core.Entities;
 using TwitterApi.DAL.Context;
 using TwitterApi.DAL.Repositories.Interfaces;
 

@@ -34,9 +34,6 @@ C:\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\refint\TwitterApi.DAL.d
 C:\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.pdb
 C:\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.genruntimeconfig.cache
 C:\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\ref\TwitterApi.DAL.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\refint\TwitterApi.DAL.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.pdb
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\bin\Debug\net6.0\TwitterApi.DAL.deps.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\bin\Debug\net6.0\TwitterApi.DAL.runtimeconfig.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\bin\Debug\net6.0\TwitterApi.DAL.dll
@@ -50,5 +47,8 @@ C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.Assem
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.csproj.CoreCompileInputs.cache
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.sourcelink.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterA.3A8AC82F.Up2Date
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\refint\TwitterApi.DAL.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.pdb
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\TwitterApi.DAL.genruntimeconfig.cache
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.DAL\obj\Debug\net6.0\ref\TwitterApi.DAL.dll

@@ -13,7 +13,7 @@ namespace TwitterApi.Bussines.Helpers
     {
         public static IMapper mapper { get; set; }
 
-        public static IEnumerable<TopicDetailDto> TopicDetailsMapper(this IEnumerable<Topic> source)
+        public static IEnumerable<TopicDetailDto> TopicDetailsMapper(IEnumerable<Topic> source)
         => mapper.Map<IEnumerable<TopicDetailDto>>(source);
     }
 }

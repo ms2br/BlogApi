@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using System.Web;
+using TwitterApi.Bussines.Dtos.UserDtos;
 using TwitterApi.Core.Entities.Identity;
 namespace TwitterApi.Bussines.Services.Implements
 {

@@ -14,7 +14,7 @@ namespace TwitterApi.DAL.Repositories.Implements
             _db = db;
         }
 
-        DbSet<T> Table => _db.Set<T>();
+       protected DbSet<T> Table => _db.Set<T>();
 
         public async Task<IQueryable<T>> GetAllAsync(bool noTracking = true, params string[] includes)
         {
@@ -37,12 +37,13 @@ namespace TwitterApi.DAL.Repositories.Implements
         public void Remove(T data)
         => Table.Remove(data);
 
-        async Task<IQueryable<T>> includeMultiples(IQueryable<T> includeQuery, params string[] includes)
+       protected async Task<IQueryable<T>> includeMultiples(IQueryable<T> includeQuery, params string[] includes)
         {
             if(includes.Length > 0 && includes != null)
                 foreach (var include in includes)
                     includeQuery = includeQuery.Include(include);
             return includeQuery;
         }
+
     }
 }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using TwitterApi.Bussines.Dtos.BlogDto;
+using TwitterApi.Bussines.Dtos.BlogDtos;
 using TwitterApi.Bussines.Services.Interfaces;
 
 namespace TwitterApi.Api.Controllers
@@ -22,8 +22,7 @@ namespace TwitterApi.Api.Controllers
         {
             try
             {
-                var item = await _service.GetAllAsync<BlogDetailDto>("Files", "BlogTopics");
-                await _service.Test();
+                var item = await _service.GetAllAsync<BlogDetailDto>("Files", "Topics.Topic", "Topics","AppUser");
                 return Ok(item);
             }
             catch (Exception ex)

@@ -174,9 +174,6 @@ C:\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\scopedcss\bundle\Twitte
 C:\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.csproj.CopyComplete
 C:\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.genruntimeconfig.cache
 C:\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\ref\TwitterApi.Api.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\refint\TwitterApi.Api.dll
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.pdb
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\appsettings.Development.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\appsettings.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\TwitterApi.Api.staticwebassets.runtime.json
@@ -260,5 +257,8 @@ C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\staticwebassets\msbu
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\staticwebassets.pack.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\scopedcss\bundle\TwitterApi.Api.styles.css
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterA.ED148382.Up2Date
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\refint\TwitterApi.Api.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.pdb
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.genruntimeconfig.cache
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\ref\TwitterApi.Api.dll

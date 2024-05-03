@@ -1,4 +1,6 @@
-﻿namespace TwitterApi.Bussines.ExternalServices.Interfaces
+﻿using TwitterApi.Bussines.Dtos.UserDtos;
+
+namespace TwitterApi.Bussines.ExternalServices.Interfaces
 {
     public interface IEmailService
     {

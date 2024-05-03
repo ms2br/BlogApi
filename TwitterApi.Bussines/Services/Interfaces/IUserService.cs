@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using TwitterApi.Bussines.Dtos.UserDtos;
 
 namespace TwitterApi.Bussines.Services.Interfaces
 {

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
+using TwitterApi.Bussines.Dtos.UserDtos;
 using TwitterApi.Bussines.ExternalServices.Implements;
 using TwitterApi.Bussines.Services.Implements;
 using TwitterApi.DAL.Repositories.Implements;
