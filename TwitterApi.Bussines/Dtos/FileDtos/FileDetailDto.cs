@@ -12,15 +12,4 @@ namespace TwitterApi.Bussines.Dtos.FileDtos
         public DateTime? UpdateTime { get; set; }
         public bool IsDeleted { get; set; }
     }
-
-    public class FileDetailDtoValidator : AbstractValidator<FileDetailDto>
-    {
-        public FileDetailDtoValidator()
-        {
-            RuleFor(x => x.Name)
-                .MaximumLength(32)
-                .MinimumLength(3)
-                .NotEmpty();
-        }
-    }
 }

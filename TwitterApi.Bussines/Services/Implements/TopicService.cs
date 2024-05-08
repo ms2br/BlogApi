@@ -43,13 +43,13 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         }
 
-        public async Task RemoveAsync(int? id)
+        public async Task RemoveAsync(int? id, params string[] includes)
         {
-            _repo.Remove(await CheckIdAsync(id));
+            _repo.Remove(await CheckIdAsync(id,false, includes));
             await _repo.SaveAsync();
         }
 
-        public async Task SoftRemoveAsync(int? id)
+        public async Task SoftRemoveAsync(int? id, params string[] includes)
         {
             var item = await CheckIdAsync(id);
             item.IsDeleted = true;

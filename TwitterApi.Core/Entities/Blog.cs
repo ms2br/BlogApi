@@ -10,6 +10,7 @@ namespace TwitterApi.Core.Entities
             Files = new HashSet<FileEntity>();
             Topics = new HashSet<BlogTopic>();
         }
+
         public string Content { get; set; }
         public string UserId { get; set; }
         public AppUser? AppUser { get; set; }

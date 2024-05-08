@@ -29,7 +29,10 @@ namespace TwitterApi.DAL.Repositories.Implements
         => await _db.SaveChangesAsync();
 
         public async Task<T> GetByIdAsync(int? id, bool noTracking = true, params string[] includes)
-        => noTracking ? await Table.AsNoTracking().FirstOrDefaultAsync(x => x.Id == id) : await Table.FindAsync(id);
+        {
+            var item = await includeMultiples(Table.AsQueryable(), includes);            
+            return noTracking ? await item.AsNoTracking().FirstOrDefaultAsync(x=> x.Id == id) : await item.FirstOrDefaultAsync(x => x.Id == id);
+        }
 
         public async Task<bool> IsExistAsync(Expression<Func<T, bool>> expression)
         => await Table.AnyAsync(expression);
@@ -44,6 +47,5 @@ namespace TwitterApi.DAL.Repositories.Implements
                     includeQuery = includeQuery.Include(include);
             return includeQuery;
         }
-
     }
 }

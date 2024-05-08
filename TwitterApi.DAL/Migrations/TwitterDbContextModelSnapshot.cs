@@ -252,7 +252,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Blogs", (string)null);
+                    b.ToTable("Blogs");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
@@ -273,7 +273,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("BlogTopic", (string)null);
+                    b.ToTable("BlogTopic");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
@@ -313,7 +313,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("BlogId");
 
-                    b.ToTable("Files", (string)null);
+                    b.ToTable("Files");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
@@ -340,7 +340,7 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Topics", (string)null);
+                    b.ToTable("Topics");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Identity.AppUser", b =>
@@ -421,13 +421,13 @@ namespace TwitterApi.DAL.Migrations
             modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
                 {
                     b.HasOne("TwitterApi.Core.Entities.Blog", "Blog")
-                        .WithMany("BlogTopics")
+                        .WithMany("Topics")
                         .HasForeignKey("BlogId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TwitterApi.Core.Entities.Topic", "Topic")
-                        .WithMany("BlogTopics")
+                        .WithMany("Blogs")
                         .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -449,14 +449,14 @@ namespace TwitterApi.DAL.Migrations
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
                 {
-                    b.Navigation("BlogTopics");
-
                     b.Navigation("Files");
+
+                    b.Navigation("Topics");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
                 {
-                    b.Navigation("BlogTopics");
+                    b.Navigation("Blogs");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Identity.AppUser", b =>

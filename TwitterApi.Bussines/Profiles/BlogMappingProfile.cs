@@ -13,6 +13,7 @@ namespace TwitterApi.Bussines.Profiles
         public BlogMappingProfile()
         {        
             CreateMap<BlogCreateDto, Blog>();
+            CreateMap<BlogUpdateDetailDto, Blog>().ReverseMap();
             CreateMap<Blog, BlogDetailDto>()
             .BeforeMap((src, dest, context) =>
             {

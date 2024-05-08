@@ -1,12 +1,14 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
+using TwitterApi.Bussines.Dtos.BlogDtos;
 using TwitterApi.Bussines.Dtos.FileDtos;
+using TwitterApi.Bussines.Helpers;
 using TwitterApi.Core.Entities;
 using TwitterApi.DAL.Repositories.Interfaces;
 
 namespace TwitterApi.Bussines.Services.Implements
 {
-    public class FileService : IFileService
+    public class FileService: IFileService
     {
         IFileRepository _repo { get; }
         IMapper _mapper { get; }
@@ -15,13 +17,6 @@ namespace TwitterApi.Bussines.Services.Implements
             _repo = repo;
             _mapper = mapper;
         }
-
-        public async Task<IEnumerable<T>> GetAllAsync<T>()
-            where T : class
-        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync());
-
-        public async Task<T> GetByIdAsync<T>(int? id) where T : class
-        => _mapper.Map<T>(await CheckIdAsync(id, false));
 
         public async Task<FileEntity> CreateAsync(IFormFile file)
         {
@@ -33,40 +28,30 @@ namespace TwitterApi.Bussines.Services.Implements
             return entity;
         }
 
-        public async Task UpdateAsync(int? id, FileUpdateDto dto)
+        public async Task UpdateAsync(IFormFile file, BlogUpdateDetailDto blog,int? id)
         {
-            var entity = await CheckIdAsync(id);
-            foreach (var item in dto.Files)
-            {
-                await item.UpdateAsync(entity.Path);
-                entity.UpdateTime = DateTime.UtcNow;
-                await _repo.SaveAsync();
-            }
-        }
-
-        public async Task RemoveAsync(int? id)
-        {
-            var item = await CheckIdAsync(id);
-            _repo.Remove(item);
-            item.Path.FileRemove();
+            var item = GetByFile(id, blog);
+            await file.UpdateAsync(item.Path);
+            item.UpdateTime = DateTime.UtcNow;
             await _repo.SaveAsync();
         }
 
-        public async Task SoftRemoveAsync(int? id)
+        public async Task RemoveAsync(FileEntity file)
         {
-            var item = await CheckIdAsync(id);
-            item.IsDeleted = true;
+            _repo.Remove(file);
+            file.Path.FileRemove();
             await _repo.SaveAsync();
         }
 
-        public async Task<FileEntity> CheckIdAsync(int? id, bool isTrack = true)
+        public async Task RemoveAsync(BlogUpdateDetailDto blog, int? id)
         {
-            if (id < 1 || id == null)
-                throw new ArgumentOutOfRangeException();
-            var item = await _repo.GetByIdAsync(id);
-            if (item == null)
-                throw new NotFoundException<FileEntity>("File Not Found");
-            return item;
+            var file = GetByFile(id, blog);
+            _repo.Remove(file);
+            file.Path.FileRemove();
+            await _repo.SaveAsync();
         }
+
+        FileEntity GetByFile(int? id, BlogUpdateDetailDto blog)
+        => blog.Files.FirstOrDefault(x => x.Id == id) ?? throw new NotFoundException<FileEntity>();
     }
 }
