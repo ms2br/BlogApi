@@ -25,8 +25,8 @@ namespace TwitterApi.Bussines.ExternalServices.Implements
             token.Expiration = DateTime.UtcNow.AddHours(hours);
             JwtSecurityToken securityToken = new
                 (
-                  audience: _configuration["Toke:Audience"],
-                  issuer: _configuration["Toke:Issuer"],
+                  audience: _configuration["Token:Audience"],
+                  issuer: _configuration["Token:Issuer"],
                   expires: token.Expiration,
                   notBefore: DateTime.UtcNow,
                   signingCredentials: signingCredentials
