@@ -32,10 +32,8 @@ namespace TwitterApi.DAL.Context
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             var builder = modelBuilder.Entity<IdentityUser>();
-
             builder.Ignore(x => x.PhoneNumberConfirmed);
             builder.Ignore(x => x.PhoneNumber);
-
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
             base.OnModelCreating(modelBuilder);
         }

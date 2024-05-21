@@ -1,11 +1,14 @@
 ﻿using FluentValidation;
+using FluentValidation.Validators;
 using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace TwitterApi.Bussines.Dtos.UserDtos
 {
     public class RegisterDto
     {
         public string UserName { get; set; }
+        [EmailAddress]
         public string Email { get; set; }
         public string Password { get; set; }
         public string ConfirmPassword { get; set; }
@@ -24,6 +27,7 @@ namespace TwitterApi.Bussines.Dtos.UserDtos
             RuleFor(x => x.Email)
                 .MaximumLength(255)
                 .MinimumLength(4)
+                .EmailAddress()
                 .NotEmpty();
 
             RuleFor(x => x.BirthDate)

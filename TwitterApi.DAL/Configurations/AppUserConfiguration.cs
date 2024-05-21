@@ -20,6 +20,8 @@ namespace TwitterApi.DAL.Configurations
                 .IsRequired()
                 .HasMaxLength(255);
 
+            builder.Ignore(x => x.PhoneNumber);
+
             builder.Property(x => x.ImgUrl)
                 .IsRequired(false);
         }

@@ -36,8 +36,8 @@ namespace TwitterApi.Bussines.Services.Implements
 
             UserChecking(user);
 
-            var signInResult = await _sm.PasswordSignInAsync(user, dto.Password, dto.IsRemember, true);
-            if (!signInResult.Succeeded)
+            var signInResult = await _um.CheckPasswordAsync(user, dto.Password);
+            if (!signInResult)
                 throw new AuthenticationErrorException();
             return await _token.CreateAccessTokenAsync(5);
         }

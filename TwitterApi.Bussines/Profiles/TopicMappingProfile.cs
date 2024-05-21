@@ -8,7 +8,8 @@ namespace TwitterApi.Bussines.Profiles
     {
         public TopicMappingProfile()
         {
-            CreateMap<TopicCreateDto, Topic>();
+            CreateMap<TopicCreateDto, Topic>()
+                .ForMember(t=> t.NormalizedTopicName,opt=> opt.MapFrom(dto => dto.Name.ToUpper()));
             CreateMap<Topic, TopicDetailDto>();
             CreateMap<TopicUpdateDto, Topic>();
         }

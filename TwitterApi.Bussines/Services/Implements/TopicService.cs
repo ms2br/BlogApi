@@ -28,17 +28,19 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task CreateAsync(TopicCreateDto dto)
         {
-            await IsNameExistAsync(dto.Name);
+            //await IsNameExistAsync(dto.Name);
             await _repo.CreateAsync(_mapper.Map<Topic>(dto));
             await _repo.SaveAsync();
         }
 
         public async Task UpdateAsync(int? id, TopicUpdateDto dto)
         {
+            ///todo : TopicUpdateDto zamani UserName IsUnique Oldugunu controll et
+            ///
             Topic topic = await CheckIdAsync(id);
             if (topic.Name.ToLower() == dto.Name.ToLower())
                 throw new TopicIsExistException();
-            await IsNameExistAsync(dto.Name);
+            //await IsNameExistAsync(dto.Name);
             _mapper.Map(dto, topic);
             await _repo.SaveAsync();
         }
@@ -66,11 +68,14 @@ namespace TwitterApi.Bussines.Services.Implements
             return item;
         }
 
-        async Task IsNameExistAsync(string name)
-        {
-            if (await _repo.IsExistAsync(x => x.Name.ToLower() == name.ToLower()))
-                throw new TopicIsExistException();
-        }
+        #region Topic Name IsUnique
+        //async Task IsNameExistAsync(string name)
+        //{
+        //    if (await _repo.IsExistAsync(x => x.Name.ToLower() == name.ToLower()))
+        //        throw new TopicIsExistException();
+        //}
+        #endregion
+
 
         public async Task<bool> IsExistAsync(int? id)
          => await _repo.IsExistAsync(x => x.Id == id);

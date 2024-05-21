@@ -245,7 +245,6 @@ C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.Gener
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.AssemblyInfoInputs.cache
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.AssemblyInfo.cs
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.csproj.CoreCompileInputs.cache
-C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.sourcelink.json
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\staticwebassets.build.json

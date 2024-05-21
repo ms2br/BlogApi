@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "N+h6AABSnRxZIsXmyIY/pwZrYfDF2soZw1fBzlVxcv4=",
+  "Hash": "wr3+h9zayXAR3nhGsaDgne4MkYzPofYv/ueySB9nmQE=",
   "Source": "TwitterApi.Api",
   "BasePath": "_content/TwitterApi.Api",
   "Mode": "Default",
@@ -16,44 +16,6 @@
     }
   ],
   "Assets": [
-    {
-      "Identity": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\53aa253e-392c-46b6-91aa-2a5dc319c524.png",
-      "SourceId": "TwitterApi.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
-      "BasePath": "_content/TwitterApi.Api",
-      "RelativePath": "assets/img/post/53aa253e-392c-46b6-91aa-2a5dc319c524.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\post\\53aa253e-392c-46b6-91aa-2a5dc319c524.png"
-    },
-    {
-      "Identity": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\assets\\img\\post\\fbce30b4-f5e2-4119-b9e4-54b6c5b7a47d.png",
-      "SourceId": "TwitterApi.Api",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\",
-      "BasePath": "_content/TwitterApi.Api",
-      "RelativePath": "assets/img/post/fbce30b4-f5e2-4119-b9e4-54b6c5b7a47d.png",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\assets\\img\\post\\fbce30b4-f5e2-4119-b9e4-54b6c5b7a47d.png"
-    },
     {
       "Identity": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\wwwroot\\schema\\confirmEmail.html",
       "SourceId": "TwitterApi.Api",

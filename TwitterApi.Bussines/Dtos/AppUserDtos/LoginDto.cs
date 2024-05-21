@@ -6,7 +6,6 @@ namespace TwitterApi.Bussines.Dtos.AppUserDtos
     {
         public string UserNameOrEmail { get; set; }
         public string Password { get; set; }
-        public bool IsRemember { get; set; }
     }
 
     public class LoginDtoValidator : AbstractValidator<LoginDto>

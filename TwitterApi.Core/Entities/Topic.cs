@@ -10,6 +10,7 @@ namespace TwitterApi.Core.Entities
         }
 
         public string Name { get; set; }
+        public string NormalizedTopicName { get; set; }
         public ICollection<BlogTopic>? Blogs { get; set; }
     }
 }

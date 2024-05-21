@@ -10,7 +10,6 @@ namespace TwitterApi.DAL.Configurations
         {
             builder.Ignore(x => x.Id).Ignore(x => x.IsDeleted);
             builder.HasKey(x => new { x.BlogId, x.TopicId });
-
             builder.HasOne(x => x.Topic)
                 .WithMany(x => x.Blogs)
                 .HasForeignKey(x => x.TopicId)

@@ -335,10 +335,17 @@ namespace TwitterApi.DAL.Migrations
                         .HasMaxLength(32)
                         .HasColumnType("nvarchar(32)");
 
+                    b.Property<string>("NormalizedTopicName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("NormalizedTopicName")
+                        .IsUnique();
 
                     b.ToTable("Topics");
                 });

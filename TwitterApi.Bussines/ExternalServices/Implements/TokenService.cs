@@ -1,6 +1,7 @@
 ﻿using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 using System.Text;
 using TwitterApi.Bussines.Dtos.TokenDtos;
 using TwitterApi.Bussines.ExternalServices.Interfaces;
@@ -19,19 +20,16 @@ namespace TwitterApi.Bussines.ExternalServices.Implements
         {
             TokenDto token = new();
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Token:SecurityKey"]));
-
-            SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256);
-
-            token.Expiration = DateTime.UtcNow.AddHours(hours);
+            SigningCredentials signingCredentials = new(securityKey, SecurityAlgorithms.HmacSha256); 
+            token.Expiration = DateTime.UtcNow.AddHours(hours);            
             JwtSecurityToken securityToken = new
                 (
-                  audience: _configuration["Toke:Audience"],
-                  issuer: _configuration["Toke:Issuer"],
+                  audience: _configuration.GetSection("Token")?["Audience"],
+                  issuer: _configuration["Token:Issuer"],
                   expires: token.Expiration,
                   notBefore: DateTime.UtcNow,
                   signingCredentials: signingCredentials
                 );
-
             JwtSecurityTokenHandler tokenHandler = new();
             token.AccessToken = tokenHandler.WriteToken(securityToken);
             return token;
