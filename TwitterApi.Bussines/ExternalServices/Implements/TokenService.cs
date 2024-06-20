@@ -28,7 +28,11 @@ namespace TwitterApi.Bussines.ExternalServices.Implements
             claims.Add(new Claim(ClaimTypes.NameIdentifier, tokenDto.AppUser.Id));
             JwtSecurityToken securityToken = new
                 (
+<<<<<<< HEAD
                   audience: _configuration.GetSection("Token")?["Audience"],
+=======
+                  audience: _configuration["Token:Audience"],
+>>>>>>> ef56f88cd14b3e72836dc5345ba74d47b1cd92ee
                   issuer: _configuration["Token:Issuer"],
                   expires: token.Expiration,
                   notBefore: DateTime.UtcNow,
