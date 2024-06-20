@@ -1,5 +1,6 @@
 ﻿using System.Linq.Expressions;
 using TwitterApi.Core.Entities.Common;
+using TwitterApi.Core.Entities.Identity;
 
 namespace TwitterApi.DAL.Repositories.Interfaces
 {

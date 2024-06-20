@@ -75,5 +75,19 @@ namespace TwitterApi.Api.Controllers
             }
         }
 
+        [HttpDelete("[action]")]
+        public async Task<IActionResult> UserRemoveAsync()
+        {
+            try
+            {
+               await _user.RemoveUserAsync(User);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            return Ok();
+        }
     }
 }

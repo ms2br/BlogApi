@@ -1,5 +1,6 @@
 ﻿using System.Security.Claims;
 using TwitterApi.Bussines.Dtos.UserDtos;
+using TwitterApi.Core.Entities.Identity;
 
 namespace TwitterApi.Bussines.Services.Interfaces
 {
@@ -9,5 +10,6 @@ namespace TwitterApi.Bussines.Services.Interfaces
         Task ChangePassworAsync(ChangePassworDto dto, ClaimsPrincipal user);
         Task UpdatePasswordAsync(UpdatePasswordDto dto);
         Task EmailConfirmedAsync(string userId, string token);
+        Task RemoveUserAsync(ClaimsPrincipal user);
     }
 }

@@ -5,6 +5,7 @@ using System.Reflection;
 using TwitterApi.Core.Entities;
 using TwitterApi.Core.Entities.Common;
 using TwitterApi.Core.Entities.Identity;
+using TwitterApi.Core.Enums;
 namespace TwitterApi.DAL.Context
 {
     public class TwitterDbContext : IdentityDbContext

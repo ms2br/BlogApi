@@ -28,19 +28,24 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task CreateAsync(TopicCreateDto dto)
         {
+            #region IsNameExistAsync
             //await IsNameExistAsync(dto.Name);
+            #endregion
+         
             await _repo.CreateAsync(_mapper.Map<Topic>(dto));
             await _repo.SaveAsync();
         }
 
         public async Task UpdateAsync(int? id, TopicUpdateDto dto)
         {
-            ///todo : TopicUpdateDto zamani UserName IsUnique Oldugunu controll et
-            ///
             Topic topic = await CheckIdAsync(id);
             if (topic.Name.ToLower() == dto.Name.ToLower())
                 throw new TopicIsExistException();
+            
+            #region IsNameExistAsync
             //await IsNameExistAsync(dto.Name);
+            #endregion
+
             _mapper.Map(dto, topic);
             await _repo.SaveAsync();
         }

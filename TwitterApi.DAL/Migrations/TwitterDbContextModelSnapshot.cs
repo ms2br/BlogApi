@@ -47,6 +47,29 @@ namespace TwitterApi.DAL.Migrations
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
                     b.ToTable("AspNetRoles", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "9006f91e-5138-4181-996b-88eeaa3125bf",
+                            ConcurrencyStamp = "c2efa6e9-22c0-4d22-8a51-536f3843e343",
+                            Name = "Member",
+                            NormalizedName = "MEMBER"
+                        },
+                        new
+                        {
+                            Id = "d8593f16-0526-46b8-937f-1913e306f366",
+                            ConcurrencyStamp = "f756fe1b-7e31-46c5-b498-2fd445c9ae73",
+                            Name = "Moderator",
+                            NormalizedName = "MODERATOR"
+                        },
+                        new
+                        {
+                            Id = "ca6332cf-ca23-4b16-a6fe-3270f04f0dda",
+                            ConcurrencyStamp = "80ae1b97-7638-4cc5-b9b7-c18cbaed044a",
+                            Name = "Admin",
+                            NormalizedName = "ADMIN"
+                        });
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

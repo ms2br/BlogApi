@@ -8,6 +8,7 @@ namespace TwitterApi.DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<Blog> builder)
         {
+
             builder.Property(x => x.Content)
                 .HasMaxLength(1024)
                 .IsRequired();
@@ -23,7 +24,6 @@ namespace TwitterApi.DAL.Configurations
                 .HasForeignKey(x => x.BlogId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired(false);
-
         }
     }
 }

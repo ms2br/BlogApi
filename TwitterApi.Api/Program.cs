@@ -5,14 +5,18 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using TwitterApi.Api;
+using TwitterApi.Api.Middlewares;
 using TwitterApi.Bussines;
 using TwitterApi.Bussines.Helpers;
 using TwitterApi.Core.Entities.Identity;
 using TwitterApi.DAL.Context;
+using StackExchange.Redis;
+using TwitterApi.Bussines.Dtos.RedisDtos;
 
 var builder = WebApplication.CreateBuilder(args);
 Jwt jwt = builder.Configuration.GetSection("Token").Get<Jwt>();
 
+builder.Services.Configure<RedisOption>(builder.Configuration.GetSection("Redis"));
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(option =>
@@ -52,14 +56,17 @@ builder.Services.AddAuthorization();
 builder.Services.AddBusinessLayer();
 var app = builder.Build();
 
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+    app.UseSeedData();
 }
 
 app.UseStaticFiles();
 app.UseHttpsRedirection();
+app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

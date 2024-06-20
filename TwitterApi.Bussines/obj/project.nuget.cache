@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qXDjoSPfvjx6cxo7Vxf+sbVgclqshRaKt3Ga9z2iYSNpWhBKH274RZGLJUchRcmMg8SpAKsGCXXvBAp2TMv8XA==",
+  "dgSpecHash": "Bf0dJTJUmgQhRCnKwWf4Sv6lw5PFMf9uloPHC7ij1VNQP8yfcM0Cj7MLPI494PmkX/5ws/MIJojoByPO9dfTRw==",
   "success": true,
   "projectFilePath": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\TwitterApi.Bussines.csproj",
   "expectedPackageFiles": [
@@ -23,6 +23,7 @@
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\6.0.28\\microsoft.entityframeworkcore.sqlserver.6.0.28.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.caching.stackexchangeredis\\6.0.28\\microsoft.extensions.caching.stackexchangeredis.6.0.28.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.1\\microsoft.extensions.dependencyinjection.6.0.1.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
@@ -41,6 +42,8 @@
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\msbr\\.nuget\\packages\\pipelines.sockets.unofficial\\2.2.8\\pipelines.sockets.unofficial.2.2.8.nupkg.sha512",
+    "C:\\Users\\msbr\\.nuget\\packages\\stackexchange.redis\\2.7.33\\stackexchange.redis.2.7.33.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\system.collections.immutable\\6.0.0\\system.collections.immutable.6.0.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\system.configuration.configurationmanager\\4.7.0\\system.configuration.configurationmanager.4.7.0.nupkg.sha512",
     "C:\\Users\\msbr\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.1\\system.diagnostics.diagnosticsource.6.0.1.nupkg.sha512",

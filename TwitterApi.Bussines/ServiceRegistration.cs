@@ -29,6 +29,7 @@ namespace TwitterApi.Bussines
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IBlogService, BlogService>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+            services.AddSingleton<IRedisService, RedisService>();
             return services;
         }
 

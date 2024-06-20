@@ -64,7 +64,7 @@ namespace TwitterApi.Bussines.Services.Implements
         {
             Blog blog = await CheckIdAsync(id, false, includes);
             if (blog.UserId != _userId)
-                throw new AuthenticationErrorException();            
+                throw new AuthenticationException();            
             var item = _mapper.Map<BlogUpdateDetailDto>(blog);
             item.Content = updateDto.Content;
             await updateTopicAsync(updateDto,item);
@@ -117,7 +117,7 @@ namespace TwitterApi.Bussines.Services.Implements
                 throw new ArgumentOutOfRangeException();
             Blog blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
-                throw new AuthenticationErrorException();
+                throw new AuthenticationException();
             var item = _mapper.Map<BlogUpdateDetailDto>(blog);
             await _fileService.UpdateAsync(file.File, item, fileId);
             await _repo.SaveAsync();
@@ -130,7 +130,7 @@ namespace TwitterApi.Bussines.Services.Implements
                 throw new ArgumentOutOfRangeException();
             Blog blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
-                throw new AuthenticationErrorException();
+                throw new AuthenticationException();
             var blogDto = _mapper.Map<BlogUpdateDetailDto>(blog);
             await _fileService.RemoveAsync(blogDto, fileId);
             await _repo.SaveAsync();
@@ -151,7 +151,7 @@ namespace TwitterApi.Bussines.Services.Implements
                 if (!await _topicService.IsExistAsync(id))
                     throw new TopicIsExistException();
         }
-
+       
         bool checkIsAuthenticated()
         => _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
     }

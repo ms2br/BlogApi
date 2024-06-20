@@ -5,6 +5,7 @@ using System.Text;
 using System.Web;
 using TwitterApi.Bussines.Dtos.UserDtos;
 using TwitterApi.Core.Entities.Identity;
+using TwitterApi.Core.Enums;
 
 namespace TwitterApi.Bussines.Services.Implements
 {
@@ -14,7 +15,6 @@ namespace TwitterApi.Bussines.Services.Implements
         UserManager<AppUser> _um { get; }
         IEmailService _email { get; }
         IAuthService _auth { get; }
-
         public UserService(IMapper mapper, UserManager<AppUser> um, IEmailService email, IAuthService auth)
         {
             _mapper = mapper;
@@ -45,8 +45,9 @@ namespace TwitterApi.Bussines.Services.Implements
                 }
                 throw new IdentityResultException(messages.ToString().TrimEnd());
             }
-            string token = await _um.GenerateEmailConfirmationTokenAsync(appUser);
             await _email.SendEmailConfirmedAsync(_mapper.Map<UserDto>(appUser));
+
+            await AddRoleAsync(appUser);
         }
 
         public async Task ChangePassworAsync(ChangePassworDto dto, ClaimsPrincipal user)
@@ -80,6 +81,25 @@ namespace TwitterApi.Bussines.Services.Implements
             if (!result.Succeeded)
                 throw new PasswordChangeFailedException();
             await _um.GenerateConcurrencyStampAsync(appUser);
+        }
+
+        public async Task RemoveUserAsync(ClaimsPrincipal user)
+        {
+            AppUser appUser = await _um.GetUserAsync(user);
+            UserChecking(appUser);
+            await _um.DeleteAsync(appUser);            
+        }
+
+        async Task AddRoleAsync(AppUser appUser)
+        {
+            var result =  await _um.AddToRoleAsync(appUser,nameof(Roles.Member));
+            if(!result.Succeeded)
+            {
+                StringBuilder stringBuilder = new StringBuilder();
+                foreach (var error in result.Errors)
+                    stringBuilder.Append(error.Description + " ");
+                throw new IdentityResultException(stringBuilder.ToString().TrimEnd());
+            }
         }
 
         void UserChecking(AppUser appUser)

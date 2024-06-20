@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 using TwitterApi.Core.Entities.Common;
+using TwitterApi.Core.Entities.Identity;
 using TwitterApi.DAL.Context;
 using TwitterApi.DAL.Repositories.Interfaces;
 
@@ -38,9 +39,9 @@ namespace TwitterApi.DAL.Repositories.Implements
         => await Table.AnyAsync(expression);
 
         public void Remove(T data)
-        => Table.Remove(data);
+        => Table.Remove(data);        
 
-       protected async Task<IQueryable<T>> includeMultiples(IQueryable<T> includeQuery, params string[] includes)
+        protected async Task<IQueryable<T>> includeMultiples(IQueryable<T> includeQuery, params string[] includes)
         {
             if(includes.Length > 0 && includes != null)
                 foreach (var include in includes)

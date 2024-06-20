@@ -55,11 +55,12 @@ namespace TwitterApi.Api
                         ValidateIssuer = true,
                         ValidateIssuerSigningKey = true,
                         ValidateLifetime = true,
+                        ClockSkew = TimeSpan.Zero,
 
                         ValidAudience = config.Audience,
                         ValidIssuer = config.Issuer,
                         IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(config.SecurityKey)),
-                        LifetimeValidator = (_, expires, securityToken, _) => expires != null ? expires >= DateTime.UtcNow : false
+                        LifetimeValidator = (_, expires, _, _) => expires != null ? expires >= DateTime.UtcNow : false
                     };
                 });
             return services;
