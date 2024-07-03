@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001515_createTablessa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DenemeAPI\\Migrations\\20240701001515_createTablessa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\context\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\context\\mydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\model\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001217_createTablesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:DenemeAPI\\Migrations\\20240701001217_createTablesss.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\model\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\model\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\controllers\\valuescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\dto\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\dto\\teacher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|c:\\it\\codetasks\\api\\blogapi\\denemeapi\\denemeapi\\model\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE71AB36-7A74-4F93-B10C-B9B0A8B7EBF3}|DenemeAPI\\DenemeAPI.csproj|solutionrelative:denemeapi\\model\\users.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20240701001515_createTablessa.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001515_createTablessa.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Migrations\\20240701001515_createTablessa.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001515_createTablessa.cs",
+              "RelativeToolTip": "DenemeAPI\\Migrations\\20240701001515_createTablessa.cs",
+              "ViewState": "AQIAADwAAAAAAAAAAAAAAFwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T00:15:16.074Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "20240701001217_createTablesss.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001217_createTablesss.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Migrations\\20240701001217_createTablesss.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Migrations\\20240701001217_createTablesss.cs",
+              "RelativeToolTip": "DenemeAPI\\Migrations\\20240701001217_createTablesss.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T00:12:18.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Dto\\Teacher.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Dto\\Teacher.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Dto\\Teacher.cs",
+              "RelativeToolTip": "DenemeAPI\\Dto\\Teacher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T00:03:54.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ValuesController.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Controllers\\ValuesController.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Controllers\\ValuesController.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Controllers\\ValuesController.cs",
+              "RelativeToolTip": "DenemeAPI\\Controllers\\ValuesController.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAABsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:23:00.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Teacher.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Teacher.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Model\\Teacher.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Teacher.cs",
+              "RelativeToolTip": "DenemeAPI\\Model\\Teacher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:11:44.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Student.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Model\\Student.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Student.cs",
+              "RelativeToolTip": "DenemeAPI\\Model\\Student.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:10:57.872Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Users.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Users.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Model\\Users.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Model\\Users.cs",
+              "RelativeToolTip": "DenemeAPI\\Model\\Users.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:10:05.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MyDbContext.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Context\\MyDbContext.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Context\\MyDbContext.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Context\\MyDbContext.cs",
+              "RelativeToolTip": "DenemeAPI\\Context\\MyDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:06:58.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Program.cs",
+              "RelativeDocumentMoniker": "DenemeAPI\\Program.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\DenemeAPI\\DenemeAPI\\Program.cs",
+              "RelativeToolTip": "DenemeAPI\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAcwCYAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-30T23:01:58.377Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

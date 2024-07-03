@@ -1,7 +1,9 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using TwitterApi.Bussines.Dtos.AppUserDtos;
 using TwitterApi.Bussines.Dtos.UserDtos;
+using TwitterApi.Bussines.Helpers;
 using TwitterApi.Bussines.Services.Interfaces;
 
 namespace TwitterApi.Api.Controllers
@@ -12,7 +14,7 @@ namespace TwitterApi.Api.Controllers
     {
 
         IUserService _user { get; }
-
+        ActionContext _userName { get; }
         public UsersController(IUserService user)
         {
             _user = user;
@@ -80,12 +82,11 @@ namespace TwitterApi.Api.Controllers
         {
             try
             {
-               await _user.RemoveUserAsync(User);
+               await _user.RemoveUserAsync(User,HttpContext.GetUserToken());
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                return Problem(ex.Message);
             }
             return Ok();
         }

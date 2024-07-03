@@ -10,6 +10,6 @@ namespace TwitterApi.Bussines.Services.Interfaces
         Task ChangePassworAsync(ChangePassworDto dto, ClaimsPrincipal user);
         Task UpdatePasswordAsync(UpdatePasswordDto dto);
         Task EmailConfirmedAsync(string userId, string token);
-        Task RemoveUserAsync(ClaimsPrincipal user);
+        Task RemoveUserAsync(ClaimsPrincipal user,string token);
     }
 }

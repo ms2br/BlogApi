@@ -56,12 +56,12 @@ builder.Services.AddAuthorization();
 builder.Services.AddBusinessLayer();
 var app = builder.Build();
 
-
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-    app.UseSeedData();
+    //app.UseRedisConnection();
+    app.UseSeedData();    
 }
 
 app.UseStaticFiles();
@@ -69,6 +69,7 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+//app.UseTokenCheck();
 app.MapControllers();
 
 PathConstants.RootPath = builder.Environment.WebRootPath;

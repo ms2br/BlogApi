@@ -63,8 +63,7 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task UpdateAsync(int? id,BlogUpdateDto updateDto,params string[] includes)
         {
             Blog blog = await CheckIdAsync(id, false, includes);
-            if (blog.UserId != _userId)
-                throw new AuthenticationException();            
+            checkIsAuthorization(blog.UserId);
             var item = _mapper.Map<BlogUpdateDetailDto>(blog);
             item.Content = updateDto.Content;
             await updateTopicAsync(updateDto,item);
@@ -78,6 +77,7 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task RemoveAsync(int? id, params string[] includes)
         {
             Blog post = await CheckIdAsync(id,false,includes);
+            checkIsAuthorization(post.UserId);
             foreach (BlogTopic topic in post.Topics)
                 post.Topics.Remove(topic);
             if(post.Files.Count() != 0 || post.Files != null)
@@ -90,6 +90,7 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task SoftRemoveAsync(int? id, params string[] includes)
         {
             Blog post = await CheckIdAsync(id,false, includes);
+            checkIsAuthorization(post.UserId);
             if (post.Files.Count() != 0 || post.Files != null)
                 foreach (var file in post.Files)
                     await _fileService.RemoveAsync(file);
@@ -154,5 +155,11 @@ namespace TwitterApi.Bussines.Services.Implements
        
         bool checkIsAuthenticated()
         => _httpContextAccessor.HttpContext.User.Identity.IsAuthenticated;
+
+        void checkIsAuthorization(string userId)
+        {
+            if (_userId != userId)
+                throw new AuthenticationException();
+        }
     }
 }

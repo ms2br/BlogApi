@@ -4,6 +4,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Web;
 using TwitterApi.Bussines.Dtos.UserDtos;
+using TwitterApi.Bussines.Exceptions.FileException;
 using TwitterApi.Core.Entities.Identity;
 using TwitterApi.Core.Enums;
 
@@ -15,12 +16,14 @@ namespace TwitterApi.Bussines.Services.Implements
         UserManager<AppUser> _um { get; }
         IEmailService _email { get; }
         IAuthService _auth { get; }
-        public UserService(IMapper mapper, UserManager<AppUser> um, IEmailService email, IAuthService auth)
+        IBlackListService _blackListService { get; }
+        public UserService(IMapper mapper, UserManager<AppUser> um, IEmailService email, IAuthService auth, IBlackListService blackListService)
         {
             _mapper = mapper;
             _um = um;
             _email = email;
             _auth = auth;
+            _blackListService = blackListService;
         }
 
         public async Task CreateUserAsync(RegisterDto dto)
@@ -83,10 +86,13 @@ namespace TwitterApi.Bussines.Services.Implements
             await _um.GenerateConcurrencyStampAsync(appUser);
         }
 
-        public async Task RemoveUserAsync(ClaimsPrincipal user)
+        public async Task RemoveUserAsync(ClaimsPrincipal user,string token)
         {
+            if (string.IsNullOrWhiteSpace(token))
+                throw new RequestAttemptException();
             AppUser appUser = await _um.GetUserAsync(user);
             UserChecking(appUser);
+            await _blackListService.SetAsync(token);
             await _um.DeleteAsync(appUser);            
         }
 

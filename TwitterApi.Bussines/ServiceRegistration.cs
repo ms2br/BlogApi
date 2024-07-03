@@ -1,8 +1,12 @@
 ﻿using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using System.Reflection;
+using TwitterApi.Bussines.Dtos.RedisDtos;
 using TwitterApi.Bussines.Dtos.UserDtos;
+using TwitterApi.Bussines.ExternalContext.Implements;
+using TwitterApi.Bussines.ExternalContext.Interfaces;
 using TwitterApi.Bussines.ExternalServices.Implements;
 using TwitterApi.Bussines.Services.Implements;
 using TwitterApi.DAL.Repositories.Implements;
@@ -28,18 +32,21 @@ namespace TwitterApi.Bussines
             services.AddScoped<ITopicService, TopicService>();
             services.AddScoped<IFileService, FileService>();
             services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IBlackListService, BlackListService>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
-            services.AddSingleton<IRedisService, RedisService>();
+            services.AddSingleton<IRedisContext, RedisContext>();
             return services;
         }
 
         public static IServiceCollection AddBusinessLayer(this IServiceCollection services)
-        {
+        {           
             services.AddRepositories();
             services.AddServices();
             services.AddFluentValidation(x => x.RegisterValidatorsFromAssemblyContaining<RegisterDtoValidator>());
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
             return services;
         }
+    
+    
     }
 }
