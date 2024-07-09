@@ -4,9 +4,9 @@ using TwitterApi.Core.Entities;
 
 namespace TwitterApi.DAL.Configurations
 {
-    public class BlogConfiguration : IEntityTypeConfiguration<Blog>
+    public class PostConfiguration : IEntityTypeConfiguration<Post>
     {
-        public void Configure(EntityTypeBuilder<Blog> builder)
+        public void Configure(EntityTypeBuilder<Post> builder)
         {
 
             builder.Property(x => x.Content)
@@ -14,14 +14,14 @@ namespace TwitterApi.DAL.Configurations
                 .IsRequired();
 
             builder.HasOne(x => x.AppUser)
-                .WithMany(x => x.Blogs)
+                .WithMany(x => x.Posts)
                 .HasForeignKey(x => x.UserId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired();
 
             builder.HasMany(x => x.Files)
-                .WithOne(x => x.Blog)
-                .HasForeignKey(x => x.BlogId)
+                .WithOne(x => x.Post)
+                .HasForeignKey(x => x.PostId)
                 .OnDelete(DeleteBehavior.NoAction)
                 .IsRequired(false);
         }

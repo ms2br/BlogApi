@@ -9,9 +9,8 @@ namespace DenemeAPI.Context
         {
         }
 
-        public DbSet<Users> Users { get; set; }
-        public DbSet<Student> Students { get; set; }
-        public DbSet<Teacher> Teachers { get; set; }
+        public DbSet<ModelOne> ModelOnes { get; set; }
+        public DbSet<ModelTwo> ModelTwos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

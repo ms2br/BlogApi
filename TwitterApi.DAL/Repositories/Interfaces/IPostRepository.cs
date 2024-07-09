@@ -2,7 +2,7 @@
 
 namespace TwitterApi.DAL.Repositories.Interfaces
 {
-    public interface IBlogRepository : IGenericRepository<Blog>
+    public interface IPostRepository : IGenericRepository<Post>
     {
     }
 }

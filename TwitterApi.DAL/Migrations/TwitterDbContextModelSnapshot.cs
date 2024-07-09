@@ -51,22 +51,22 @@ namespace TwitterApi.DAL.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "9006f91e-5138-4181-996b-88eeaa3125bf",
-                            ConcurrencyStamp = "c2efa6e9-22c0-4d22-8a51-536f3843e343",
+                            Id = "97cfaee7-03f4-4385-8cdf-df24730a6834",
+                            ConcurrencyStamp = "58613990-05a1-42fd-91b4-d5e010173c2b",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         },
                         new
                         {
-                            Id = "d8593f16-0526-46b8-937f-1913e306f366",
-                            ConcurrencyStamp = "f756fe1b-7e31-46c5-b498-2fd445c9ae73",
+                            Id = "780f0f19-ebe9-4c05-98d3-191094234371",
+                            ConcurrencyStamp = "32463528-2354-44cc-9664-113559ace523",
                             Name = "Moderator",
                             NormalizedName = "MODERATOR"
                         },
                         new
                         {
-                            Id = "ca6332cf-ca23-4b16-a6fe-3270f04f0dda",
-                            ConcurrencyStamp = "80ae1b97-7638-4cc5-b9b7-c18cbaed044a",
+                            Id = "ad39b897-eacd-45c7-90fd-8aff86c7429a",
+                            ConcurrencyStamp = "31d09d47-0738-464d-a0bc-190a97c68220",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -245,7 +245,47 @@ namespace TwitterApi.DAL.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
-            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+            modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(36)
+                        .HasColumnType("nvarchar(36)");
+
+                    b.Property<string>("Path")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PostId");
+
+                    b.ToTable("Files");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Post", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -275,12 +315,36 @@ namespace TwitterApi.DAL.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Blogs");
+                    b.ToTable("Posts");
                 });
 
-            modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
+            modelBuilder.Entity("TwitterApi.Core.Entities.PostReaction", b =>
                 {
-                    b.Property<int>("BlogId")
+                    b.Property<int>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("AppUserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<DateTime>("CreateTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Reaction")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdateTime")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("PostId", "AppUserId");
+
+                    b.HasIndex("AppUserId");
+
+                    b.ToTable("PostReaction");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.PostTopic", b =>
+                {
+                    b.Property<int>("PostId")
                         .HasColumnType("int");
 
                     b.Property<int>("TopicId")
@@ -292,51 +356,11 @@ namespace TwitterApi.DAL.Migrations
                     b.Property<DateTime?>("UpdateTime")
                         .HasColumnType("datetime2");
 
-                    b.HasKey("BlogId", "TopicId");
+                    b.HasKey("PostId", "TopicId");
 
                     b.HasIndex("TopicId");
 
-                    b.ToTable("BlogTopic");
-                });
-
-            modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("BlogId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("ContentType")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("CreateTime")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasMaxLength(36)
-                        .HasColumnType("nvarchar(36)");
-
-                    b.Property<string>("Path")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("UpdateTime")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BlogId");
-
-                    b.ToTable("Files");
+                    b.ToTable("PostTopic");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
@@ -437,10 +461,20 @@ namespace TwitterApi.DAL.Migrations
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+            modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
+                {
+                    b.HasOne("TwitterApi.Core.Entities.Post", "Post")
+                        .WithMany("Files")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.Post", b =>
                 {
                     b.HasOne("TwitterApi.Core.Entities.Identity.AppUser", "AppUser")
-                        .WithMany("Blogs")
+                        .WithMany("Posts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
@@ -448,50 +482,63 @@ namespace TwitterApi.DAL.Migrations
                     b.Navigation("AppUser");
                 });
 
-            modelBuilder.Entity("TwitterApi.Core.Entities.BlogTopic", b =>
+            modelBuilder.Entity("TwitterApi.Core.Entities.PostReaction", b =>
                 {
-                    b.HasOne("TwitterApi.Core.Entities.Blog", "Blog")
+                    b.HasOne("TwitterApi.Core.Entities.Identity.AppUser", "AppUser")
+                        .WithMany("PostReactions")
+                        .HasForeignKey("AppUserId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.HasOne("TwitterApi.Core.Entities.Post", "Post")
+                        .WithMany("PostReactions")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.NoAction)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Post");
+                });
+
+            modelBuilder.Entity("TwitterApi.Core.Entities.PostTopic", b =>
+                {
+                    b.HasOne("TwitterApi.Core.Entities.Post", "Post")
                         .WithMany("Topics")
-                        .HasForeignKey("BlogId")
+                        .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
                     b.HasOne("TwitterApi.Core.Entities.Topic", "Topic")
-                        .WithMany("Blogs")
+                        .WithMany("Posts")
                         .HasForeignKey("TopicId")
                         .OnDelete(DeleteBehavior.NoAction)
                         .IsRequired();
 
-                    b.Navigation("Blog");
+                    b.Navigation("Post");
 
                     b.Navigation("Topic");
                 });
 
-            modelBuilder.Entity("TwitterApi.Core.Entities.FileEntity", b =>
-                {
-                    b.HasOne("TwitterApi.Core.Entities.Blog", "Blog")
-                        .WithMany("Files")
-                        .HasForeignKey("BlogId")
-                        .OnDelete(DeleteBehavior.NoAction);
-
-                    b.Navigation("Blog");
-                });
-
-            modelBuilder.Entity("TwitterApi.Core.Entities.Blog", b =>
+            modelBuilder.Entity("TwitterApi.Core.Entities.Post", b =>
                 {
                     b.Navigation("Files");
+
+                    b.Navigation("PostReactions");
 
                     b.Navigation("Topics");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Topic", b =>
                 {
-                    b.Navigation("Blogs");
+                    b.Navigation("Posts");
                 });
 
             modelBuilder.Entity("TwitterApi.Core.Entities.Identity.AppUser", b =>
                 {
-                    b.Navigation("Blogs");
+                    b.Navigation("PostReactions");
+
+                    b.Navigation("Posts");
                 });
 #pragma warning restore 612, 618
         }

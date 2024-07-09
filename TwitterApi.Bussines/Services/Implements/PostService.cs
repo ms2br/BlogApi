@@ -12,18 +12,17 @@ using TwitterApi.DAL.Repositories.Interfaces;
 
 namespace TwitterApi.Bussines.Services.Implements
 {
-    public class BlogService : IBlogService
+    public class PostService : IPostService
     {
         IMapper _mapper { get; }
-        IBlogRepository _repo { get; }
+        IPostRepository _repo { get; }
         IFileService _fileService { get; }
         ITopicService _topicService { get; }
         IHttpContextAccessor _httpContextAccessor { get; set; }
-        UserManager<AppUser> _um { get; set; }
         string _userId { get; }
 
-        public BlogService(IMapper mapper,
-            IBlogRepository repo,
+        public PostService(IMapper mapper,
+            IPostRepository repo,
             IHttpContextAccessor httpContextAccessor,
             UserManager<AppUser> um,
             IFileService fileService,
@@ -32,8 +31,7 @@ namespace TwitterApi.Bussines.Services.Implements
             _mapper = mapper;
             _repo = repo;
             _httpContextAccessor = httpContextAccessor;
-            _um = um;
-            _userId = checkIsAuthenticated() ? _um.GetUserId(_httpContextAccessor.HttpContext?.User) : throw new NullReferenceException();
+            _userId = checkIsAuthenticated() ? um.GetUserId(_httpContextAccessor.HttpContext?.User) : throw new NullReferenceException();
             _fileService = fileService;
             _topicService = topicService;
         }
@@ -46,7 +44,7 @@ namespace TwitterApi.Bussines.Services.Implements
                 
         public async Task CreateAsync(BlogCreateDto dto)
         {
-            var item = _mapper.Map<Blog>(dto);
+            var item = _mapper.Map<Post>(dto);
             item.UserId = _userId;
             if (dto.FormFiles != null)
                 foreach (var file in dto.FormFiles)
@@ -54,7 +52,7 @@ namespace TwitterApi.Bussines.Services.Implements
             if(!Enumerable.SequenceEqual((await _topicService.GetAllAsync<TopicDetailDto>()).Select(x=> x.Id), dto.TopicIds))
                 throw new TopicIsExistException();
             foreach (int topicId in dto.TopicIds)
-                item.Topics.Add(new BlogTopic { TopicId = topicId});
+                item.Topics.Add(new PostTopic { TopicId = topicId});
 
             await _repo.CreateAsync(item);
             await _repo.SaveAsync();
@@ -62,7 +60,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task UpdateAsync(int? id,BlogUpdateDto updateDto,params string[] includes)
         {
-            Blog blog = await CheckIdAsync(id, false, includes);
+            Post blog = await CheckIdAsync(id, false, includes);
             checkIsAuthorization(blog.UserId);
             var item = _mapper.Map<BlogUpdateDetailDto>(blog);
             item.Content = updateDto.Content;
@@ -76,9 +74,9 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task RemoveAsync(int? id, params string[] includes)
         {
-            Blog post = await CheckIdAsync(id,false,includes);
+            Post post = await CheckIdAsync(id,false,includes);
             checkIsAuthorization(post.UserId);
-            foreach (BlogTopic topic in post.Topics)
+            foreach (PostTopic topic in post.Topics)
                 post.Topics.Remove(topic);
             if(post.Files.Count() != 0 || post.Files != null)
                 foreach (var file in post.Files)
@@ -89,7 +87,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task SoftRemoveAsync(int? id, params string[] includes)
         {
-            Blog post = await CheckIdAsync(id,false, includes);
+            Post post = await CheckIdAsync(id,false, includes);
             checkIsAuthorization(post.UserId);
             if (post.Files.Count() != 0 || post.Files != null)
                 foreach (var file in post.Files)
@@ -98,13 +96,13 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         } 
 
-        public async Task<Blog> CheckIdAsync(int? id, bool isTrack = true, params string[] includes)
+        public async Task<Post> CheckIdAsync(int? id, bool isTrack = true, params string[] includes)
         {
             if (id <= 1 || id == null)
                 throw new ArgumentOutOfRangeException();
-            Blog? item = await _repo.GetByIdAsync(id, isTrack, includes);
+            Post? item = await _repo.GetByIdAsync(id, isTrack, includes);
             if (item == null)
-                throw new NotFoundException<Blog>();
+                throw new NotFoundException<Post>();
             return item;
         }
 
@@ -116,7 +114,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
             if (fileId <= 0 || fileId == null)
                 throw new ArgumentOutOfRangeException();
-            Blog blog = await CheckIdAsync(blogId, false, includes);
+            Post blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
                 throw new AuthenticationException();
             var item = _mapper.Map<BlogUpdateDetailDto>(blog);
@@ -129,7 +127,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
             if (fileId <= 0 || fileId == null)
                 throw new ArgumentOutOfRangeException();
-            Blog blog = await CheckIdAsync(blogId, false, includes);
+            Post blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
                 throw new AuthenticationException();
             var blogDto = _mapper.Map<BlogUpdateDetailDto>(blog);
@@ -142,7 +140,7 @@ namespace TwitterApi.Bussines.Services.Implements
             await checkIsTopicIdsAsync(updateDto.TopicIds);
             if (!Enumerable.SequenceEqual(updateDto.TopicIds, blog.Topics.Select(x => x.TopicId)))
                 foreach (int topicId in updateDto.TopicIds)
-                    blog.Topics.Add(new BlogTopic { TopicId = topicId });
+                    blog.Topics.Add(new PostTopic { TopicId = topicId });
             return blog;
         }
        

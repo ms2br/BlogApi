@@ -5,7 +5,7 @@ using TwitterApi.Core.Entities;
 
 namespace TwitterApi.Bussines.Services.Interfaces
 {
-    public interface IBlogService : IGenericService<Blog, BlogCreateDto>
+    public interface IPotService : IGenericService<Post, BlogCreateDto>
     {
         Task UpdateAsync(int? id, BlogUpdateDto updateDto, params string[] includes);
 

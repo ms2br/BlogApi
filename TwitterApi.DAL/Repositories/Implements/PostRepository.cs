@@ -6,10 +6,10 @@ using TwitterApi.DAL.Repositories.Interfaces;
 
 namespace TwitterApi.DAL.Repositories.Implements
 {
-    public class BlogRepository : GenericRepository<Blog>,
-        IBlogRepository
+    public class PostRepository : GenericRepository<Post>,
+        IPostRepository
     {
-        public BlogRepository(TwitterDbContext db) : base(db)
+        public PostRepository(TwitterDbContext db) : base(db)
         {
         }
     }

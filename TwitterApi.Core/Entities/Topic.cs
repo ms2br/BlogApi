@@ -6,11 +6,11 @@ namespace TwitterApi.Core.Entities
     {
         public Topic()
         {
-            Blogs = new HashSet<BlogTopic>();
+            Posts = new HashSet<PostTopic>();
         }
 
         public string Name { get; set; }
         public string NormalizedTopicName { get; set; }
-        public ICollection<BlogTopic>? Blogs { get; set; }
+        public ICollection<PostTopic>? Posts { get; set; }
     }
 }

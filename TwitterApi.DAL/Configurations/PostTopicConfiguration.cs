@@ -4,20 +4,21 @@ using TwitterApi.Core.Entities;
 
 namespace TwitterApi.DAL.Configurations
 {
-    public class BlogTopicConfiguration : IEntityTypeConfiguration<BlogTopic>
+    public class PostTopicConfiguration : IEntityTypeConfiguration<PostTopic>
     {
-        public void Configure(EntityTypeBuilder<BlogTopic> builder)
+        public void Configure(EntityTypeBuilder<PostTopic> builder)
         {
             builder.Ignore(x => x.Id).Ignore(x => x.IsDeleted);
-            builder.HasKey(x => new { x.BlogId, x.TopicId });
+            builder.HasKey(x => new { x.PostId, x.TopicId });
+            
             builder.HasOne(x => x.Topic)
-                .WithMany(x => x.Blogs)
+                .WithMany(x => x.Posts) // PostTopics
                 .HasForeignKey(x => x.TopicId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasOne(x => x.Blog)
-                .WithMany(x => x.Topics)
-                .HasForeignKey(x => x.BlogId)
+            builder.HasOne(x => x.Post)
+                .WithMany(x => x.Topics) // PostTopics
+                .HasForeignKey(x => x.PostId)
                 .OnDelete(DeleteBehavior.NoAction);
         }
     }

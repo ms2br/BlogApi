@@ -2,11 +2,11 @@
 
 namespace TwitterApi.Core.Entities
 {
-    public class BlogTopic : BaseEntity
+    public class PostTopic : BaseEntity
     {
-        public int BlogId { get; set; }
+        public int PostId { get; set; }
         public int TopicId { get; set; }
-        public Blog? Blog { get; set; }
+        public Post? Post { get; set; }
         public Topic? Topic { get; set; }
     }
 }

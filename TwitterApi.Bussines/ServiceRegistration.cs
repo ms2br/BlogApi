@@ -19,7 +19,8 @@ namespace TwitterApi.Bussines
         {
             repo.AddScoped<ITopicRepository, TopicRepository>();
             repo.AddScoped<IFileRepository, FileRepository>();
-            repo.AddScoped<IBlogRepository, BlogRepository>();
+            repo.AddScoped<IPostRepository, PostRepository>();
+            repo.AddScoped<IPostReactionRepository, PostReactionRepository>();
             return repo;
         }
 
@@ -31,8 +32,9 @@ namespace TwitterApi.Bussines
             services.AddScoped<IUserService, UserService>();
             services.AddScoped<ITopicService, TopicService>();
             services.AddScoped<IFileService, FileService>();
-            services.AddScoped<IBlogService, BlogService>();
+            services.AddScoped<IPostService, PostService>();
             services.AddScoped<IBlackListService, BlackListService>();
+            services.AddScoped<IPostReactionService, PostReactionService>();
             services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
             services.AddSingleton<IRedisContext, RedisContext>();
             return services;

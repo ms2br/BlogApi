@@ -11,9 +11,9 @@ namespace TwitterApi.Api.Controllers
     [Authorize]
     public class BlogsController : ControllerBase
     {
-        IBlogService _service { get; }
+        IPOstService _service { get; }
 
-        public BlogsController(IBlogService service)
+        public BlogsController(IPOstService service)
         {
             _service = service;
         }

@@ -12,9 +12,9 @@ namespace TwitterApi.Bussines.Profiles
     {
         public BlogMappingProfile()
         {        
-            CreateMap<BlogCreateDto, Blog>();
-            CreateMap<BlogUpdateDetailDto, Blog>().ReverseMap();
-            CreateMap<Blog, BlogDetailDto>()
+            CreateMap<BlogCreateDto, Post>();
+            CreateMap<BlogUpdateDetailDto, Post>().ReverseMap();
+            CreateMap<Post, BlogDetailDto>()
             .BeforeMap((src, dest, context) =>
             {
                 dest.TopicDetails = context.Mapper.Map<IEnumerable<TopicDetailDto>>(src.Topics.Select(x => x.Topic));
