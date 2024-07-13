@@ -20,7 +20,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task<IEnumerable<T>> GetAllAsync<T>(params string[] includes)
             where T : class
-        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync(false,includes));
+        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync(true,includes));
 
         public async Task<T> GetByIdAsync<T>(int? id, params string[] includes)
             where T : class
@@ -38,7 +38,7 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task UpdateAsync(int? id, TopicUpdateDto dto)
         {
-            Topic topic = await CheckIdAsync(id);
+            Topic topic = await CheckIdAsync(id,false);
             if (topic.Name.ToLower() == dto.Name.ToLower())
                 throw new TopicIsExistException();
             
@@ -58,16 +58,16 @@ namespace TwitterApi.Bussines.Services.Implements
 
         public async Task SoftRemoveAsync(int? id, params string[] includes)
         {
-            var item = await CheckIdAsync(id);
+            var item = await CheckIdAsync(id,false);
             item.IsDeleted = true;
             await _repo.SaveAsync();
         }
 
-        public async Task<Topic> CheckIdAsync(int? id, bool isTrack = false,params string[] includes)
+        public async Task<Topic> CheckIdAsync(int? id, bool noTracking, params string[] includes)
         {
-            if (id <= 1 || id == null)
+            if (id < 1 || id == null)
                 throw new ArgumentOutOfRangeException();
-            Topic? item = await _repo.GetByIdAsync(id, isTrack, includes);
+            Topic? item = await _repo.GetByIdAsync(x=> x.Id == id, noTracking, includes);
             if (item == null)
                 throw new NotFoundException<Topic>();
             return item;
@@ -80,7 +80,6 @@ namespace TwitterApi.Bussines.Services.Implements
         //        throw new TopicIsExistException();
         //}
         #endregion
-
 
         public async Task<bool> IsExistAsync(int? id)
          => await _repo.IsExistAsync(x => x.Id == id);

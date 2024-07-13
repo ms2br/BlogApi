@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\build\DenemeAPI.props" />
-</Project>

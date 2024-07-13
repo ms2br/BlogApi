@@ -264,3 +264,4 @@ C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\ref\TwitterApi.Api.d
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\Microsoft.Extensions.Caching.StackExchangeRedis.dll
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\Pipelines.Sockets.Unofficial.dll
 C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\bin\Debug\net6.0\StackExchange.Redis.dll
+C:\It\CodeTasks\Api\BlogApi\TwitterApi.Api\obj\Debug\net6.0\TwitterApi.Api.MvcApplicationPartsAssemblyInfo.cs

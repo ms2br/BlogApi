@@ -13,15 +13,15 @@ namespace TwitterApi.DAL.Configurations
     {
         public void Configure(EntityTypeBuilder<PostReaction> builder)
         {
-            builder.Ignore(x => x.Id).Ignore(x => x.IsDeleted);
-
+            builder.Ignore(x => x.Id);
+            
             builder.HasKey(x => new { x.PostId, x.AppUserId });
-
+            
             builder.HasOne(x => x.AppUser)
                 .WithMany(x => x.PostReactions)
                 .HasForeignKey(x => x.AppUserId)
                 .OnDelete(DeleteBehavior.NoAction);
-
+            
             builder.HasOne(x => x.Post)
                 .WithMany(x => x.PostReactions)
                 .HasForeignKey(x => x.PostId)

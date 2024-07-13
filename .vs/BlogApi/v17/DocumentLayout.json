@@ -3,68 +3,24 @@
   "WorkspaceRootPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\controllers\\postreactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\controllers\\postreactionscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\postreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\postreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\dtos\\postreactiondtos\\prcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\dtos\\postreactiondtos\\prcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\postreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\postreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{EE08AFF4-4A51-40F1-943B-8E91DC1EA808}|TwitterApi.Core\\TwitterApi.Core.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.core\\entities\\postreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE08AFF4-4A51-40F1-943B-8E91DC1EA808}|TwitterApi.Core\\TwitterApi.Core.csproj|solutionrelative:twitterapi.core\\entities\\postreaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\interfaces\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\interfaces\\ipostservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\profiles\\topicmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\profiles\\topicmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\profiles\\postreactionmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\profiles\\postreactionmappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\configurations\\postreactionsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\configurations\\postreactionsconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\repositories\\implements\\postreactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\repositories\\implements\\postreactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\interfaces\\ipostreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\interfaces\\ipostreactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\repositories\\interfaces\\ipostreactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\repositories\\interfaces\\ipostreactionrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\interfaces\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\interfaces\\igenericservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{EE08AFF4-4A51-40F1-943B-8E91DC1EA808}|TwitterApi.Core\\TwitterApi.Core.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.core\\enums\\reactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{EE08AFF4-4A51-40F1-943B-8E91DC1EA808}|TwitterApi.Core\\TwitterApi.Core.csproj|solutionrelative:twitterapi.core\\enums\\reactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\configurations\\posttopicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\configurations\\posttopicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,233 +30,68 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "PRCreateDto.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Dtos\\PostReactionDtos\\PRCreateDto.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Dtos\\PostReactionDtos\\PRCreateDto.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Dtos\\PostReactionDtos\\PRCreateDto.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Dtos\\PostReactionDtos\\PRCreateDto.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAApAAAA",
+              "DocumentIndex": 0,
+              "Title": "TopicConfiguration.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
+              "RelativeDocumentMoniker": "TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
+              "RelativeToolTip": "TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T01:00:23.423Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PostReactionService.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
-              "ViewState": "AQIAAAcAAAAAAAAAAAAAAA8AAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T02:43:27.637Z",
-              "IsPinned": true,
+              "WhenOpened": "2024-07-13T01:04:59.494Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ServiceRegistration.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\ServiceRegistration.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\ServiceRegistration.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\ServiceRegistration.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\ServiceRegistration.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAWwBoAAABWAAAA",
+              "Title": "TopicService.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:56:52.104Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T01:04:23.945Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "PostReactionRepository.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Repositories\\Implements\\PostReactionRepository.cs",
-              "RelativeDocumentMoniker": "TwitterApi.DAL\\Repositories\\Implements\\PostReactionRepository.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Repositories\\Implements\\PostReactionRepository.cs",
-              "RelativeToolTip": "TwitterApi.DAL\\Repositories\\Implements\\PostReactionRepository.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:53:14.168Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "TopicMappingProfile.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Profiles\\TopicMappingProfile.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Profiles\\TopicMappingProfile.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Profiles\\TopicMappingProfile.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Profiles\\TopicMappingProfile.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA5AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T02:59:01.783Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "PostReactionsController.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Controllers\\PostReactionsController.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Api\\Controllers\\PostReactionsController.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Controllers\\PostReactionsController.cs",
-              "RelativeToolTip": "TwitterApi.Api\\Controllers\\PostReactionsController.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAABcAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T03:23:48.903Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "IPostService.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IPostService.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Interfaces\\IPostService.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IPostService.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Interfaces\\IPostService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T03:19:34.015Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "Reactions.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\Enums\\Reactions.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Core\\Enums\\Reactions.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\Enums\\Reactions.cs",
-              "RelativeToolTip": "TwitterApi.Core\\Enums\\Reactions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:41:00.137Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 5,
-          "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "PostReaction.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\Entities\\PostReaction.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Core\\Entities\\PostReaction.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Core\\Entities\\PostReaction.cs",
-              "RelativeToolTip": "TwitterApi.Core\\Entities\\PostReaction.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T01:20:46.857Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "IPostReactionService.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IPostReactionService.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Interfaces\\IPostReactionService.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IPostReactionService.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Interfaces\\IPostReactionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:58:12.022Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "IGenericService.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IGenericService.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Interfaces\\IGenericService.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Interfaces\\IGenericService.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Interfaces\\IGenericService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAkAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:59:00.064Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "PostReactionMappingProfile.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Profiles\\PostReactionMappingProfile.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Profiles\\PostReactionMappingProfile.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Profiles\\PostReactionMappingProfile.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Profiles\\PostReactionMappingProfile.cs",
-              "ViewState": "AQIAAAEAAAAAAAAAAAAAABIAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T02:47:10.442Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "IPostReactionRepository.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Repositories\\Interfaces\\IPostReactionRepository.cs",
-              "RelativeDocumentMoniker": "TwitterApi.DAL\\Repositories\\Interfaces\\IPostReactionRepository.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Repositories\\Interfaces\\IPostReactionRepository.cs",
-              "RelativeToolTip": "TwitterApi.DAL\\Repositories\\Interfaces\\IPostReactionRepository.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:52:05.949Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "PostService.cs",
               "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
-              "ViewState": "AQIAACIAAAAAAAAAAAAAAGIAAABkAAAA",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGIAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-09T00:55:11.377Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T01:02:39.565Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "PostTopicConfiguration.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\PostTopicConfiguration.cs",
-              "RelativeDocumentMoniker": "TwitterApi.DAL\\Configurations\\PostTopicConfiguration.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\PostTopicConfiguration.cs",
-              "RelativeToolTip": "TwitterApi.DAL\\Configurations\\PostTopicConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAA9AAAA",
+              "DocumentIndex": 3,
+              "Title": "PostReactionService.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T00:36:57.525Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T01:02:36.042Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PostReactionsConfiguration.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\PostReactionsConfiguration.cs",
-              "RelativeDocumentMoniker": "TwitterApi.DAL\\Configurations\\PostReactionsConfiguration.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\PostReactionsConfiguration.cs",
-              "RelativeToolTip": "TwitterApi.DAL\\Configurations\\PostReactionsConfiguration.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAAAAsAAABTAAAA",
+              "DocumentIndex": 4,
+              "Title": "FileService.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-04T00:32:52.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-13T01:02:19.363Z"
             }
           ]
         }

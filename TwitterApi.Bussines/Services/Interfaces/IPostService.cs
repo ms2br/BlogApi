@@ -5,9 +5,9 @@ using TwitterApi.Core.Entities;
 
 namespace TwitterApi.Bussines.Services.Interfaces
 {
-    public interface IPotService : IGenericService<Post, BlogCreateDto>
+    public interface IPostService : IGenericService<Post, PostCreateDto>
     {
-        Task UpdateAsync(int? id, BlogUpdateDto updateDto, params string[] includes);
+        Task UpdateAsync(int? id, PostUpdateDto updateDto, params string[] includes);
 
         Task RemoveImgFilesAsync(int? blogId, int? fileId, params string[] includes);
 

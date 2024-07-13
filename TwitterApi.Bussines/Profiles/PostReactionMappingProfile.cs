@@ -15,8 +15,13 @@ namespace TwitterApi.Bussines.Profiles
     {
         public PostReactionMappingProfile()
         {
-            CreateMap<PRCreateDto, PostReaction>()
-                .ForMember(r=> r.Reaction, opt=> opt.MapFrom(x=> (Reactions)x.Reaction));
+            CreateMap<PostReaction,PRDetailDto>();
+            CreateMap<PRCreateDto, PostReaction>()                
+                .ForMember(r => r.Reaction, opt => opt.MapFrom(x => x.Reaction));
+
+            CreateMap<PRUpdateDto, PostReaction>()
+                .ForMember(r => r.Reaction, opt => opt.MapFrom(x=> x.Reaction));
+
         }
     }
 }

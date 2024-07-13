@@ -28,7 +28,7 @@ namespace TwitterApi.Bussines.Services.Implements
             return entity;
         }
 
-        public async Task UpdateAsync(IFormFile file, BlogUpdateDetailDto blog,int? id)
+        public async Task UpdateAsync(IFormFile file, PostUpdateDetailDto blog,int? id)
         {
             var item = GetByFile(id, blog);
             await file.UpdateAsync(item.Path);
@@ -43,7 +43,7 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         }
 
-        public async Task RemoveAsync(BlogUpdateDetailDto blog, int? id)
+        public async Task RemoveAsync(PostUpdateDetailDto blog, int? id)
         {
             var file = GetByFile(id, blog);
             _repo.Remove(file);
@@ -51,7 +51,7 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         }
 
-        FileEntity GetByFile(int? id, BlogUpdateDetailDto blog)
+        FileEntity GetByFile(int? id, PostUpdateDetailDto blog)
         => blog.Files.FirstOrDefault(x => x.Id == id) ?? throw new NotFoundException<FileEntity>();
     }
 }

@@ -71,7 +71,9 @@ namespace TwitterApi.Api.Middlewares
                 Email = userName + "@gmail.com",
                 EmailConfirmed = true
             };
+            
             var identityResult = await um.CreateAsync(appUser, password);
+
             if (!identityResult.Succeeded)
             {
                 StringBuilder identityErrors = new StringBuilder();

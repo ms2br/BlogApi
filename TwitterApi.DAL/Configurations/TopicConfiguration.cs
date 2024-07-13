@@ -11,10 +11,8 @@ namespace TwitterApi.DAL.Configurations
             builder.Property(x => x.Name)
                 .HasMaxLength(32)
                 .IsRequired();
-
             builder.HasIndex(x => x.NormalizedTopicName)
                 .IsUnique();
-
         }
     }
 }

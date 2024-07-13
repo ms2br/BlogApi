@@ -12,6 +12,6 @@ namespace TwitterApi.Bussines.Services.Interfaces
         Task RemoveAsync(int? id,params string[] includes);
         Task SoftRemoveAsync(int? id, params string[] includes);
         Task<bool> IsExistAsync(int? id);
-        protected Task<TEntity> CheckIdAsync(int? id, bool isTrack = true, params string[] includes);
+        protected Task<TEntity> CheckIdAsync(int? id, bool noTracking = true, params string[] includes);
     }
 }

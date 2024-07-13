@@ -9,7 +9,7 @@ namespace TwitterApi.Bussines.Services.Interfaces
     {
         Task<FileEntity> CreateAsync(IFormFile file);
         Task RemoveAsync(FileEntity file);
-        Task RemoveAsync(BlogUpdateDetailDto blog, int? id);
-        Task UpdateAsync(IFormFile file, BlogUpdateDetailDto blog, int? id);
+        Task RemoveAsync(PostUpdateDetailDto blog, int? id);
+        Task UpdateAsync(IFormFile file, PostUpdateDetailDto blog, int? id);
     }
 }

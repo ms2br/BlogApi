@@ -47,7 +47,6 @@ namespace TwitterApi.Bussines.Services.Implements
                 throw new AuthenticationException();
             var userRole = await _um.GetRolesAsync(user);
 
-
             return await _token.CreateAccessTokenAsync(new TokenParamsDto
             {
                 AppUser = user,

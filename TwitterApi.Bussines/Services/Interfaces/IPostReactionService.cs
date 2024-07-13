@@ -11,6 +11,6 @@ namespace TwitterApi.Bussines.Services.Interfaces
     public interface IPostReactionService
         : IGenericService<PostReaction,PRCreateDto>
     {
-
+        Task UpdateAsync(int? postId,PRUpdateDto dto);
     }
 }

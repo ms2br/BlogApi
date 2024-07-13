@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using System.Reflection.Metadata;
 using TwitterApi.Bussines.Dtos.BlogDtos;
 using TwitterApi.Bussines.Dtos.FileDtos;
 using TwitterApi.Bussines.Dtos.TopicDtos;
@@ -37,12 +38,12 @@ namespace TwitterApi.Bussines.Services.Implements
         }
 
         public async Task<IEnumerable<T>> GetAllAsync<T>(params string[] includes) where T : class
-        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync(false, includes));
+        => _mapper.Map<IEnumerable<T>>(await _repo.GetAllAsync(true, includes));
         
         public async Task<T> GetByIdAsync<T>(int? id, params string[] includes) where T : class
          => _mapper.Map<T>(await CheckIdAsync(id, true, includes));
                 
-        public async Task CreateAsync(BlogCreateDto dto)
+        public async Task CreateAsync(PostCreateDto dto)
         {
             var item = _mapper.Map<Post>(dto);
             item.UserId = _userId;
@@ -58,11 +59,10 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         }
 
-        public async Task UpdateAsync(int? id,BlogUpdateDto updateDto,params string[] includes)
+        public async Task UpdateAsync(int? id,PostUpdateDto updateDto,params string[] includes)
         {
             Post blog = await CheckIdAsync(id, false, includes);
-            checkIsAuthorization(blog.UserId);
-            var item = _mapper.Map<BlogUpdateDetailDto>(blog);
+            var item = _mapper.Map<PostUpdateDetailDto>(blog);
             item.Content = updateDto.Content;
             await updateTopicAsync(updateDto,item);
             if (updateDto.FormFiles != null)
@@ -96,11 +96,12 @@ namespace TwitterApi.Bussines.Services.Implements
             await _repo.SaveAsync();
         } 
 
-        public async Task<Post> CheckIdAsync(int? id, bool isTrack = true, params string[] includes)
+        public async Task<Post> CheckIdAsync(int? id, bool noTracking, params string[] includes)
         {
-            if (id <= 1 || id == null)
+            if (id < 1 || id == null)
                 throw new ArgumentOutOfRangeException();
-            Post? item = await _repo.GetByIdAsync(id, isTrack, includes);
+            Post? item = await _repo.GetByIdAsync(x=> x.Id == id, noTracking, includes);
+            checkIsAuthorization(item.UserId);
             if (item == null)
                 throw new NotFoundException<Post>();
             return item;
@@ -117,7 +118,7 @@ namespace TwitterApi.Bussines.Services.Implements
             Post blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
                 throw new AuthenticationException();
-            var item = _mapper.Map<BlogUpdateDetailDto>(blog);
+            var item = _mapper.Map<PostUpdateDetailDto>(blog);
             await _fileService.UpdateAsync(file.File, item, fileId);
             await _repo.SaveAsync();
         }
@@ -130,12 +131,12 @@ namespace TwitterApi.Bussines.Services.Implements
             Post blog = await CheckIdAsync(blogId, false, includes);
             if (blog.UserId != _userId)
                 throw new AuthenticationException();
-            var blogDto = _mapper.Map<BlogUpdateDetailDto>(blog);
+            var blogDto = _mapper.Map<PostUpdateDetailDto>(blog);
             await _fileService.RemoveAsync(blogDto, fileId);
             await _repo.SaveAsync();
         }
 
-        async Task<BlogUpdateDetailDto> updateTopicAsync(BlogUpdateDto updateDto, BlogUpdateDetailDto blog)
+        async Task<PostUpdateDetailDto> updateTopicAsync(PostUpdateDto updateDto, PostUpdateDetailDto blog)
         {
             await checkIsTopicIdsAsync(updateDto.TopicIds);
             if (!Enumerable.SequenceEqual(updateDto.TopicIds, blog.Topics.Select(x => x.TopicId)))
