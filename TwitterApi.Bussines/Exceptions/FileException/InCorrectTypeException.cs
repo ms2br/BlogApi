@@ -1,15 +1,16 @@
-﻿namespace TwitterApi.Bussines.Exceptions.FileException
+﻿using Microsoft.AspNetCore.Http;
+
+namespace TwitterApi.Bussines.Exceptions.FileException
 {
-    public class InCorrectTypeException : Exception
+    public class InCorrectTypeException : Exception,IBaseException
     {
-        public InCorrectTypeException()
+
+        public int StatusCode => StatusCodes.Status415UnsupportedMediaType;
+        public string ExceptionMessage { get; set; }        
+
+        public InCorrectTypeException(string? message)
         {
-
-        }
-
-        public InCorrectTypeException(string message) : base(message)
-        {
-
+            ExceptionMessage = message;
         }
 
     }

@@ -38,7 +38,7 @@ namespace TwitterApi.Bussines.Services.Implements
         {
             AppUser user = dto switch
             {
-                var item when item.UserNameOrEmail.Contains("@") => await _um.FindByEmailAsync(dto.UserNameOrEmail),
+                var item when dto.UserNameOrEmail.Contains("@") => await _um.FindByEmailAsync(dto.UserNameOrEmail),
                 _ => await _um.FindByNameAsync(dto.UserNameOrEmail)
             };
             ObjectNullChecking(user);
@@ -58,7 +58,7 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task ForgotPassworAsync(string email)
         {
             if (string.IsNullOrWhiteSpace(email))
-                throw new NotFoundUserException();
+                throw new NotFoundException<AppUser>(ExceptionMessages.UserNotFoundMessage);
             var user = await _um.FindByEmailAsync(email);
             ObjectNullChecking(user);
             string resetToken = await _um.GeneratePasswordResetTokenAsync(user);
@@ -81,7 +81,7 @@ namespace TwitterApi.Bussines.Services.Implements
         void ObjectNullChecking(AppUser appUser)
         {
             if (appUser == null)
-                throw new NotFoundUserException();
+                throw new NotFoundException<AppUser>(ExceptionMessages.UserNotFoundMessage);
         }
     }
 }

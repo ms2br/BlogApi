@@ -1,15 +1,18 @@
-﻿namespace TwitterApi.Bussines.Exceptions.IdentityException
+﻿using Microsoft.AspNetCore.Http;
+
+namespace TwitterApi.Bussines.Exceptions.IdentityException
 {
-    public class IdentityResultException : Exception
+    public class IdentityResultException : Exception,IBaseException
     {
-        public IdentityResultException()
+
+
+        public int StatusCode => StatusCodes.Status422UnprocessableEntity;
+
+        public string ExceptionMessage { get; set; }
+
+        public IdentityResultException(string? message)
         {
-
-        }
-
-        public IdentityResultException(string message) : base(message)
-        {
-
+            ExceptionMessage = message;
         }
     }
 }

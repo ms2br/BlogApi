@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Http;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,20 @@ using System.Threading.Tasks;
 
 namespace TwitterApi.Bussines.Exceptions.PostReactionException
 {
-    public class PostReactionIsExistException : Exception
+    public class PostReactionIsExistException : Exception, IBaseException
     {
-        public PostReactionIsExistException(string message):base(message)
+        public int StatusCode => StatusCodes.Status409Conflict;
+
+        public string ExceptionMessage { get; set; }
+
+        public PostReactionIsExistException(string message)
         {
-            
+            ExceptionMessage = message;    
         }
 
-        public PostReactionIsExistException():base("PostReaction Already Add")
+        public PostReactionIsExistException()
         {
-            
+            ExceptionMessage = "PostReaction Already Add";
         }
     }
 }

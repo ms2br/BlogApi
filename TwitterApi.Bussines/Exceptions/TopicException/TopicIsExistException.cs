@@ -1,13 +1,21 @@
-﻿namespace TwitterApi.Bussines.Exceptions.TopicException
+﻿using Microsoft.AspNetCore.Http;
+
+namespace TwitterApi.Bussines.Exceptions.TopicException
 {
     public class TopicIsExistException : Exception
     {
-        public TopicIsExistException() : base("Topic Already Add")
+        public int StatusCode => StatusCodes.Status409Conflict;
+
+        public string ExceptionMessage { get; set; }
+
+        public TopicIsExistException()
         {
+            ExceptionMessage = "Topic Already Add";
         }
 
-        public TopicIsExistException(string? message) : base(message)
+        public TopicIsExistException(string? message)
         {
+            ExceptionMessage = message;
         }
     }
 }

@@ -6,5 +6,7 @@
 
         public static string InCorrectTypeMessage =>
             "Wrong file type";
+
+        public static string UserNotFoundMessage => "User Not Found";
     }
 }

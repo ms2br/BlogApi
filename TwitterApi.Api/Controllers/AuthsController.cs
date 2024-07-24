@@ -18,28 +18,14 @@ namespace TwitterApi.Api.Controllers
         [HttpPost("LoginAsync")]
         public async Task<IActionResult> LoginAsync(LoginDto dto)
         {
-            try
-            {
-                return Ok(await _auth.LoginAsync(dto));
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _auth.LoginAsync(dto));
         }
 
         [HttpPost("ForgotPasswordAsync")]
         public async Task<IActionResult> ForgotPasswordAsync(PasswordRessetDto dto)
         {
-            try
-            {
-                await _auth.ForgotPassworAsync(dto.Email);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _auth.ForgotPassworAsync(dto.Email);
+            return Ok();
         }
     }
 }

@@ -58,20 +58,22 @@ var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
+    app.UseSeedData();
     app.UseSwagger();
-    app.UseSwaggerUI();
-    //app.UseRedisConnection();
-    app.UseSeedData();    
+    app.UseSwaggerUI(c=>
+    {
+        c.ConfigObject.AdditionalItems.Add("persistAuthorization", "true");
+    });
+    //app.UseRedisConnection();    
 }
 
 app.UseStaticFiles();
 app.UseHttpsRedirection();
 app.UseRouting();
+app.UseCustomExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
 //app.UseTokenCheck();
 app.MapControllers();
-
 PathConstants.RootPath = builder.Environment.WebRootPath;
-
 app.Run();

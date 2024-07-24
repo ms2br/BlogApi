@@ -111,7 +111,7 @@ namespace TwitterApi.Bussines.Services.Implements
         void UserChecking(AppUser appUser)
         {
             if (appUser == null)
-                throw new NotFoundUserException();
+                throw new NotFoundException<AppUser>(ExceptionMessages.UserNotFoundMessage);
         }
     }
 }

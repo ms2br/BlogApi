@@ -3,12 +3,36 @@
   "WorkspaceRootPath": "C:\\It\\CodeTasks\\Api\\BlogApi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.dal\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{453974F6-E99C-47F5-AC6A-C99289EDA7B8}|TwitterApi.DAL\\TwitterApi.DAL.csproj|solutionrelative:twitterapi.dal\\configurations\\topicconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\middlewares\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\middlewares\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\topicservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\middlewares\\rediscontextmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\middlewares\\rediscontextmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\middlewares\\tokenvalidationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\middlewares\\tokenvalidationmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\exceptions\\identityexception\\passwordchangefailedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\exceptions\\identityexception\\passwordchangefailedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\exceptions\\common\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\exceptions\\common\\notfoundexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\controllers\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\controllers\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\postservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -21,6 +45,14 @@
     {
       "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\fileservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.bussines\\services\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{60A23934-3100-45CC-A25F-592CC0259B4D}|TwitterApi.Bussines\\TwitterApi.Bussines.csproj|solutionrelative:twitterapi.bussines\\services\\implements\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|c:\\it\\codetasks\\api\\blogapi\\twitterapi.api\\middlewares\\seedmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{590DDC77-784F-4424-86FE-05B86BABC74C}|TwitterApi.Api\\TwitterApi.Api.csproj|solutionrelative:twitterapi.api\\middlewares\\seedmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,64 +66,169 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "TopicConfiguration.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
-              "RelativeDocumentMoniker": "TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
-              "RelativeToolTip": "TwitterApi.DAL\\Configurations\\TopicConfiguration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAeAAAA",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Program.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Program.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Program.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEkAAAAVAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:04:59.494Z",
+              "WhenOpened": "2024-07-15T02:49:15.41Z",
+              "IsPinned": true,
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TopicService.cs",
-              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
-              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
-              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
-              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\TopicService.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEwAAAAIAAAA",
+              "DocumentIndex": 5,
+              "Title": "NotFoundException.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Exceptions\\Common\\NotFoundException.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Exceptions\\Common\\NotFoundException.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Exceptions\\Common\\NotFoundException.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Exceptions\\Common\\NotFoundException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:04:23.945Z"
+              "WhenOpened": "2024-07-23T22:36:48.011Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\UserService.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\UserService.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\UserService.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\UserService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAFAAAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T22:12:21.187Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AuthsController.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Controllers\\AuthsController.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Controllers\\AuthsController.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Controllers\\AuthsController.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Controllers\\AuthsController.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T22:10:32.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PostService.cs",
               "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
               "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\PostService.cs",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAGIAAAAsAAAA",
+              "ViewState": "AQIAAEEAAAAAAAAAAAAnwGUAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:02:39.565Z"
+              "WhenOpened": "2024-07-23T22:03:31.156Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 9,
               "Title": "PostReactionService.cs",
               "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
               "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
               "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
               "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\PostReactionService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ViewState": "AQIAAE8AAAAAAAAAAAAnwGYAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:02:36.042Z"
+              "WhenOpened": "2024-07-23T22:00:34.722Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 10,
               "Title": "FileService.cs",
               "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
               "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
               "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
               "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\FileService.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-13T01:02:19.363Z"
+              "WhenOpened": "2024-07-23T22:00:25.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AuthService.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\AuthService.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Services\\Implements\\AuthService.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Services\\Implements\\AuthService.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Services\\Implements\\AuthService.cs",
+              "ViewState": "AQIAAD0AAAAAAAAAAAAnwFMAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T22:00:06.724Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "SeedMiddleware.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\SeedMiddleware.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Middlewares\\SeedMiddleware.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\SeedMiddleware.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Middlewares\\SeedMiddleware.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T21:38:57.096Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CustomExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\CustomExceptionHandlerMiddleware.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Middlewares\\CustomExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\CustomExceptionHandlerMiddleware.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Middlewares\\CustomExceptionHandlerMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T21:46:34.524Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TokenValidationMiddleware.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\TokenValidationMiddleware.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Middlewares\\TokenValidationMiddleware.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\TokenValidationMiddleware.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Middlewares\\TokenValidationMiddleware.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAABQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T22:14:41.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "RedisContextMiddleware.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\RedisContextMiddleware.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Api\\Middlewares\\RedisContextMiddleware.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Api\\Middlewares\\RedisContextMiddleware.cs",
+              "RelativeToolTip": "TwitterApi.Api\\Middlewares\\RedisContextMiddleware.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABkAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T21:38:15.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PasswordChangeFailedException.cs",
+              "DocumentMoniker": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Exceptions\\IdentityException\\PasswordChangeFailedException.cs",
+              "RelativeDocumentMoniker": "TwitterApi.Bussines\\Exceptions\\IdentityException\\PasswordChangeFailedException.cs",
+              "ToolTip": "C:\\It\\CodeTasks\\Api\\BlogApi\\TwitterApi.Bussines\\Exceptions\\IdentityException\\PasswordChangeFailedException.cs",
+              "RelativeToolTip": "TwitterApi.Bussines\\Exceptions\\IdentityException\\PasswordChangeFailedException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAABxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-23T22:12:32.336Z"
             }
           ]
         }

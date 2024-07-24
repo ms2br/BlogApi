@@ -1,15 +1,16 @@
-﻿namespace TwitterApi.Bussines.Exceptions.FileException
+﻿using Microsoft.AspNetCore.Http;
+
+namespace TwitterApi.Bussines.Exceptions.FileException
 {
-    public class InValidSizeException : Exception
+    public class InValidSizeException : Exception,IBaseException
     {
-        public InValidSizeException()
+
+        public int StatusCode => StatusCodes.Status413PayloadTooLarge;
+        public string ExceptionMessage { get; set; }
+
+        public InValidSizeException(string message)
         {
-
-        }
-
-        public InValidSizeException(string message) : base(message)
-        {
-
+            ExceptionMessage = message;
         }
     }
 }
