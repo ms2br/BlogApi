@@ -22,113 +22,58 @@ namespace TwitterApi.Api.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetAllAsync()
         {
-            try
-            {
-                var item = await _service.GetAllAsync<PostDetailDto>("Files", "Topics.Topic", "Topics","AppUser");
-                return Ok(item);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetAllAsync<PostDetailDto>("Files", "Topics.Topic", "Topics", "AppUser"));
         }
 
         [HttpGet("[action]/{id?}")]
         public async Task<IActionResult> GetByIdAsync(int? id)
         {
-            try
-            {
-                var item = await _service.GetByIdAsync<PostDetailDto>(id,"Files", "Topics.Topic", "Topics", "AppUser");
-                return Ok(item);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetByIdAsync<PostDetailDto>(id, "Files", "Topics.Topic", "Topics", "AppUser"));
         }
 
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateAsync([FromForm] PostCreateDto dto)
         {
-            try
-            {
-                await _service.CreateAsync(dto);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.CreateAsync(dto);
+            return Ok();
         }
 
         [HttpPut("[action]/{id?}")]
         public async Task<IActionResult> UpdateAsync(int? id, [FromForm] PostUpdateDto update)
         {
-            try
-            {
-                await _service.UpdateAsync(id, update, "Files", "Topics.Topic" ,"AppUser");
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.UpdateAsync(id, update, "Files", "Topics.Topic", "AppUser");
+            return Ok();
         }
 
         [HttpPatch("[action]/{blogId?}/{fileId?}")]
         public async Task<IActionResult> UpdateImgAsync(int? blogId,int? fileId,[FromForm] FileUpdateDto file)
         {
-            try
-            {
-               await _service.UpdateImgFilesAsync(blogId,fileId,file,"Files");
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.UpdateImgFilesAsync(blogId, fileId, file, "Files");
+            return Ok();
         }
 
         [HttpDelete("[action]/{id?}")]
         public async Task<IActionResult> RemoveAsync(int? id)
         {
-            try
-            {
-                await _service.RemoveAsync(id, "Files","Topics.Topic");
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.RemoveAsync(id, "Files", "Topics.Topic");
+            return Ok();
         }
 
         [HttpDelete("[action]/{blogId?}/{fileId?}")]
         public async Task<IActionResult> RemoveImgAsync(int? blogId, int? fileId)
         {
-            try
-            {
-                await _service.RemoveImgFilesAsync(blogId, fileId, "Files");
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.RemoveImgFilesAsync(blogId, fileId, "Files");
+            return Ok();
         }
 
         [HttpDelete("[action]/{id}")]
         public async Task<IActionResult> SoftRemoveAsync(int? id)
         {
-            try
-            {
-                await _service.SoftRemoveAsync(id,"Files");
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.SoftRemoveAsync(id, "Files");
+            return Ok();
         }
     }
 }

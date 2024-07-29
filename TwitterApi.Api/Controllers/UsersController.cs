@@ -24,70 +24,38 @@ namespace TwitterApi.Api.Controllers
         [HttpPost("ChagePasswordAsync")]
         public async Task<IActionResult> ChagePasswordAsync(ChangePassworDto dto)
         {
-            try
-            {
-                await _user.ChangePassworAsync(dto, User);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _user.ChangePassworAsync(dto, User);
+            return Ok();
         }
 
         [HttpGet("EmailConfirmedAsync/{userId}/{token}")]
         public async Task<IActionResult> EmailConfirmedAsync(string userId, string token)
         {
-            try
-            {
-                await _user.EmailConfirmedAsync(userId, token);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _user.EmailConfirmedAsync(userId, token);
+            return Ok();
         }
 
         [HttpPost("RegisterAsync")]
         public async Task<IActionResult> RegisterAsync([FromForm] RegisterDto registerDto)
         {
-            try
-            {
-                await _user.CreateUserAsync(registerDto);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _user.CreateUserAsync(registerDto);
+            return Ok();
         }
 
         [HttpPost("ResetPasswordAsync")]
         public async Task<IActionResult> ResetPasswordAsync([FromBody] UpdatePasswordDto update)
         {
-            try
-            {
-                await _user.UpdatePasswordAsync(update);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _user.UpdatePasswordAsync(update);
+            return Ok();
         }
 
         [HttpDelete("[action]")]
         public async Task<IActionResult> UserRemoveAsync()
         {
-            try
-            {
-               await _user.RemoveUserAsync(User,HttpContext.GetUserToken());
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _user.RemoveUserAsync(User, HttpContext.GetUserToken());
             return Ok();
         }
     }

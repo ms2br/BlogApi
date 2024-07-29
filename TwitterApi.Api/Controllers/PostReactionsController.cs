@@ -22,85 +22,42 @@ namespace TwitterApi.Api.Controllers
         [HttpGet("[action]")]
         public async Task<IActionResult> GetAllAsync()
         {
-            try
-            {
-                var item = await _service.GetAllAsync<PRDetailDto>("Post","AppUser");
-                return Ok(item);
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetAllAsync<PRDetailDto>("Post", "AppUser"));
         }
 
         [HttpGet("[action]/{postId?}")]
         public async Task<IActionResult> GetByIdAsync(int? postId)
         {
-            try
-            {
-                var item = await _service.GetByIdAsync<PRDetailDto>(postId, "AppUser", "Post");
-                return Ok(item);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetByIdAsync<PRDetailDto>(postId, "AppUser", "Post"));
         }
 
         [HttpPost("[action]")]
         public async Task<IActionResult> CreateAsync(PRCreateDto dto)
         {
-            try
-            {
-                await _service.CreateAsync(dto);
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.CreateAsync(dto);
+            return Ok();
         }
 
         [HttpPut("[action]/{postId?}")]
         public async Task<IActionResult> UpdateAsync(int? postId, PRUpdateDto dto)
         {
-            try
-            {
-                await _service.UpdateAsync(postId, dto);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.UpdateAsync(postId, dto);
+            return Ok();
         }
 
         [HttpDelete("[action]/{postId?}")]
         public async Task<IActionResult> RemoveAsync(int? postId)
         {
-            try
-            {
-                await _service.RemoveAsync(postId);
-                return Ok();
-            }
-            catch(Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.RemoveAsync(postId);
+            return Ok();
         }
 
         [HttpDelete("[action]/{postId?}")]
         public async Task<IActionResult> SoftRemoveAsync(int? postId)
         {
-            try
-            {
-                await _service.SoftRemoveAsync(postId);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.SoftRemoveAsync(postId);
+            return Ok();
         }
     }
 }

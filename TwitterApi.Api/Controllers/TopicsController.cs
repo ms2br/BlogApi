@@ -19,83 +19,45 @@ namespace TwitterApi.Api.Controllers
         [HttpGet("GetAllAsync")]
         public async Task<IActionResult> GetAllAsync()
         {
-            try
-            {
-                return Ok(await _service.GetAllAsync<TopicDetailDto>());
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetAllAsync<TopicDetailDto>());
         }
 
         [HttpGet("GetByIdAsync")]
         public async Task<IActionResult> GetByIdAsync(int? id)
         {
-            try
-            {
-                return Ok(await _service.GetByIdAsync<TopicDetailDto>(id));
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            return Ok(await _service.GetByIdAsync<TopicDetailDto>(id));
+
         }
 
         [HttpPost("CreateTopicAsync")]
         public async Task<IActionResult> CreateTopicAsync(TopicCreateDto dto)
         {
-            try
-            {
-                await _service.CreateAsync(dto);
-                return StatusCode(StatusCodes.Status201Created);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.CreateAsync(dto);
+            return StatusCode(StatusCodes.Status201Created);
         }
 
         [HttpPut("UpdateTopic")]
         public async Task<IActionResult> Task(int? id, TopicUpdateDto dto)
         {
-            try
-            {
-                await _service.UpdateAsync(id, dto);
-                return Ok();
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.UpdateAsync(id, dto);
+            return Ok();
         }
 
         [HttpDelete("RemoveAsync")]
         public async Task<IActionResult> RemoveAsync(int? id)
         {
-            try
-            {
-                await _service.RemoveAsync(id);
-                return StatusCode(StatusCodes.Status200OK);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+
+            await _service.RemoveAsync(id);
+            return StatusCode(StatusCodes.Status200OK);
         }
 
         [HttpDelete("SoftRemoveAsync")]
         public async Task<IActionResult> SoftRemoveAsync(int? id)
         {
-            try
-            {
-                await _service.SoftRemoveAsync(id);
-                return StatusCode(StatusCodes.Status200OK);
-            }
-            catch (Exception ex)
-            {
-                return Problem(ex.Message);
-            }
+            await _service.SoftRemoveAsync(id);
+            return StatusCode(StatusCodes.Status200OK);
         }
     }
 }
