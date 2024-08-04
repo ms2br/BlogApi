@@ -14,7 +14,6 @@ namespace TwitterApi.Api.Controllers
     {
 
         IUserService _user { get; }
-        ActionContext _userName { get; }
         public UsersController(IUserService user)
         {
             _user = user;

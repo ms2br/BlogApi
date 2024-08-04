@@ -66,6 +66,7 @@ namespace TwitterApi.Bussines.Services.Implements
         public async Task EmailConfirmedAsync(string userId, string token)
         {
             AppUser appUser = _um.FindByIdAsync(userId).Result;
+            UserChecking(appUser);
             if (!await _auth.VerifyEmailConfirmedTokenAsync(appUser, token))
                 throw new IdentityResultException("Email verification failed.");
             IdentityResult result = await _um.ConfirmEmailAsync(appUser,
