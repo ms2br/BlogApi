@@ -140,8 +140,11 @@ namespace TwitterApi.Bussines.Services.Implements
         {
             await checkIsTopicIdsAsync(updateDto.TopicIds);
             if (!Enumerable.SequenceEqual(updateDto.TopicIds, blog.Topics.Select(x => x.TopicId)))
+            {
+                blog.Topics.Clear();
                 foreach (int topicId in updateDto.TopicIds)
                     blog.Topics.Add(new PostTopic { TopicId = topicId });
+            }
             return blog;
         }
        
